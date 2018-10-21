@@ -32,6 +32,7 @@ html, body {
   color: $text;
   font-family: 'Muli', sans-serif;
   margin: 0;
+  // height: 100%;
 }
 
 .container {
@@ -39,10 +40,11 @@ html, body {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   border-radius: 8px;
-  height: calc(100vh - 4rem);
+  // height: 100%;
 }
 nav {
   align-items: center;
+  background-color: white;
   display: flex;
   height: 2rem;
   justify-content: space-between;
@@ -51,6 +53,7 @@ nav {
   top: 0;
   width: 100%;
   padding: 4rem 6rem;
+  z-index: 100;
   .btn {
     @include nav-button;
   }
@@ -126,12 +129,15 @@ label {
 /* 2 --------------------------- SECTIONS --------------------------- */
 
 
+
+
 .container section {
-  scroll-snap-align: start;
+  // scroll-snap-align: start;
   height: 66vh;
   display: flex;
   justify-content: center;
   align-items: center;
+
   .w-50 {
     width: 50%;
     padding: 6rem;
@@ -171,7 +177,36 @@ label {
         background: url('../hero/nhs.png') no-repeat;
         background-size: cover;
       }
+      // section 4
+      .social {
+        background: url('../hero/social.png') no-repeat;
+        background-size: cover;
+      }
+      // section 5
+      .storytelling {
+        background: url('../hero/storytelling.png') no-repeat;
+        background-size: cover;
+      }
     }
+  }
+}
+
+.container section.break, .container section.cta, .container section.footer {
+  height: auto;
+  padding-left: 6rem;
+  width: 100%;
+  &.break {
+    justify-content: flex-start;
+  }
+  &.cta > .cta-container {
+    align-items: center;
+    padding: 2rem 0;
+    .or {
+      padding: 0 1rem;
+    }
+  }
+  &.footer {
+    padding: 2rem 0;
   }
 }
 
