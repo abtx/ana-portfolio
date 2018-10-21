@@ -32,7 +32,7 @@ html, body {
   color: $text;
   font-family: 'Muli', sans-serif;
   margin: 0;
-  // height: 100%;
+  height: 100%;
 }
 
 .container {
@@ -40,7 +40,7 @@ html, body {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   border-radius: 8px;
-  // height: 100%;
+  height: 100vh;
 }
 nav {
   align-items: center;
@@ -58,7 +58,7 @@ nav {
     @include nav-button;
   }
   .nav-item {
-    font-size: 24px;
+    font-size: 22px;
     padding: 1rem 2rem;
   }
 }
@@ -73,7 +73,7 @@ h1 {
 .h1-underline {
   display: block;
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   &:after {
     content: '';
     background-color: $text;
@@ -94,16 +94,16 @@ a {
   text-decoration: none;
 }
 ul {
-  font-size: 20px;
+  font-size: 16px;
   list-style: none;
   margin: .4rem 0 2rem 0;
   padding: 0;
   li {
     color: $text;
-    font-weight: light;
-    padding: 1rem 0;
+    padding: .5rem 0;
+    color: $text-secondary;
     &.bold {
-      color: $text-secondary;
+      color: $text;
       font-weight: bold;
     }
   }
@@ -132,12 +132,11 @@ label {
 
 
 .container section {
-  // scroll-snap-align: start;
+  scroll-snap-align: center;
   height: 66vh;
   display: flex;
   justify-content: center;
   align-items: center;
-
   .w-50 {
     width: 50%;
     padding: 6rem;
@@ -191,8 +190,10 @@ label {
   }
 }
 
-.container section.break, .container section.cta, .container section.footer {
+div.break, div.cta, div.footer {
+  display: flex;
   height: auto;
+  justify-content: center;
   padding-left: 6rem;
   width: 100%;
   &.break {
