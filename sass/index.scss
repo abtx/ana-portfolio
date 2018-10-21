@@ -34,12 +34,8 @@ html, body {
   margin: 0;
 }
 
-.page-wrapper {
-
-}
-
 .container {
-  margin-top: 4rem;
+  padding-top: 4rem;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   border-radius: 8px;
@@ -60,6 +56,7 @@ nav {
   }
   .nav-item {
     font-size: 24px;
+    padding: 1rem 2rem;
   }
 }
 * {
@@ -112,8 +109,12 @@ label {
   font-size: 22px;
 }
 
-.btn {
-  @include button;
+.cta-container {
+  display: flex;
+  justify-content: center;
+  .btn {
+    @include button;
+  }
 }
 
 /* 1.3. Helpers */
@@ -127,7 +128,7 @@ label {
 
 .container section {
   scroll-snap-align: start;
-  height: 100vh;
+  height: 66vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,8 +138,7 @@ label {
     &.hero {
       overflow: hidden;
       padding: 0;
-
-      height: 50%;
+      height: 70%;
       width: 50%;
       &.left {
         border-top-right-radius: 6rem;
@@ -161,9 +161,14 @@ label {
         background: url('../hero/bank.png') no-repeat;
         background-size: cover;
       }
-      // section 1
+      // section 2
       .mimo {
         background: url('../hero/mimo.png') no-repeat;
+        background-size: cover;
+      }
+      // section 3
+      .nhs {
+        background: url('../hero/nhs.png') no-repeat;
         background-size: cover;
       }
     }
