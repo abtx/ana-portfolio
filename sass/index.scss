@@ -14,7 +14,7 @@ $link: #4568E7;
 
 // text
 $text: #3C3C3C;
-$text-small: #555252;
+$text-secondary: #555252;
 $text-invert: white;
 
 // labels
@@ -68,7 +68,21 @@ nav {
 h1 {
   font-size: 36px;
   font-weight: bold;
-  margin: 0;
+  margin: 0 0 1rem 0;
+}
+.h1-underline {
+  display: block;
+  position: relative;
+  margin-bottom: 2rem;
+  &:after {
+    content: '';
+    background-color: $text;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 0rem;
+    width: 12rem;
+  }
 }
 p {
   font-size: 26px;
@@ -85,9 +99,11 @@ ul {
   margin: .4rem 0 2rem 0;
   padding: 0;
   li {
+    color: $text;
+    font-weight: light;
     padding: 1rem 0;
-    font-weight: normal;
     &.bold {
+      color: $text-secondary;
       font-weight: bold;
     }
   }
@@ -111,29 +127,44 @@ label {
 
 .container section {
   scroll-snap-align: start;
-  height: inherit;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   .w-50 {
     width: 50%;
-    // section 1
-    &.image {
-      border-top-right-radius: 20%;
-      border-bottom-right-radius: 20%;
+    padding: 6rem;
+    &.hero {
       overflow: hidden;
-      margin-right: 3rem;
-      // background-color: red;
-      img {
-        width: 100%;
-        height: auto;
-      }
-      .bank {
-        // background: url('../hero/bank.png') no-repeat;
-        background-size: cover;
-        height: inherit;
-        width: inherit;
+      padding: 0;
 
+      height: 50%;
+      width: 50%;
+      &.left {
+        border-top-right-radius: 6rem;
+        border-bottom-right-radius: 6rem;
+        margin-right: 6rem;
+      }
+      &.right {
+        border-top-left-radius: 6rem;
+        border-bottom-left-radius: 6rem;
+        margin-left: 6rem;
+      }
+
+      .bg-img {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+      // section 1
+      .bank {
+        background: url('../hero/bank.png') no-repeat;
+        background-size: cover;
+      }
+      // section 1
+      .mimo {
+        background: url('../hero/mimo.png') no-repeat;
+        background-size: cover;
       }
     }
   }
