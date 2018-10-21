@@ -1,0 +1,90 @@
+/*
+Copyright Artur Janas
+SASS: sass --watch sass/index.scss:public/styles/index.css
+*/
+@keyframes plane_in {
+  from {
+    opacity: 0;
+    transform: translate3d(-40px, 40px, -120px); }
+  to {
+    opacity: 1;
+    transform: translate3d(0 0 0); } }
+@keyframes plane_out {
+  from {
+    opacity: 1;
+    transform: translate3d(0 0 0); }
+  to {
+    opacity: 0;
+    transform: translate3d(40px, -40px, -120px); } }
+/* 1 --------------------------- CORE --------------------------- */
+/* 1.1. Variables */
+/* 1.2.  Core properties */
+html, body {
+  box-sizing: border-box;
+  color: #686868;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+
+.container {
+  margin-top: 4rem;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  border-radius: 8px;
+  height: calc(100vh - 4rem); }
+
+nav {
+  align-items: center;
+  display: flex;
+  height: 2rem;
+  justify-content: space-between;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+
+* {
+  box-sizing: inherit; }
+
+h1 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0; }
+
+p {
+  font-size: 18px;
+  font-weight: 500;
+  margin: .2rem 0 0 0; }
+
+a {
+  color: #077EFF;
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: none; }
+
+ul {
+  font-size: 13px;
+  list-style: none;
+  margin: .4rem 0 2rem 0;
+  padding: 0; }
+  ul li {
+    display: inline-block; }
+
+/* 1.3. Helpers */
+/* 2 --------------------------- SECTIONS --------------------------- */
+.container section {
+  scroll-snap-align: start;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.container section:nth-child(1) {
+  background: hotpink;
+  color: white; }
+
+.container section:nth-child(2) {
+  background: azure; }
+
+.container section:nth-child(3) {
+  background: blanchedalmond; }
+
+/*# sourceMappingURL=index.css.map */

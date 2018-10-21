@@ -1,0 +1,71 @@
+@mixin button {
+  background-color: #999;
+  border-radius: 40px;
+  cursor: pointer;
+  cursor: hand;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 100;
+  letter-spacing: .02rem;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: none;
+  // transition: background 0.2s, color 0.2s;
+  span {
+    padding-left: 1.4rem;
+  }
+  &:before {
+    content: '';
+    background: url('../images/icon/paper_plane.svg') no-repeat top left;
+    height: 1.3rem;
+    position: absolute;
+    opacity: 1;
+    left: 1.4rem;
+    top: .9rem;
+    width: 1.3rem;
+  }
+  &:after {
+    content: '';
+    background: url('../images/icon/paper_plane.svg') no-repeat top left;
+    height: 1.3rem;
+    position: absolute;
+    left: 1.4rem;
+    top: .9rem;
+    opacity: 0;
+    width: 1.3rem;
+  }
+  &:hover {
+    // background-color: $sun;
+    box-shadow: inset -2px -6px 20px 0px rgba(86, 73, 61, 0.1);
+    transition: all .2s ease-in-out;
+    &:before {
+      animation: plane_out .3s ease-in-out forwards;
+      -webkit-animation: plane_out .3s ease-in-out forwards;
+    }
+    &:after {
+      animation: plane_in .3s ease-in-out forwards;
+      -webkit-animation: plane_in .3s ease-in-out forwards;
+    }
+  }
+}
+@keyframes plane_in {
+	from {
+    opacity: 0;
+		transform: translate3d(-40px, 40px, -120px);
+	}
+	to {
+    opacity: 1;
+		transform: translate3d(0 0 0);
+	}
+}
+@keyframes plane_out {
+	from {
+    opacity: 1;
+		transform: translate3d(0 0 0);
+	}
+	to {
+    opacity: 0;
+		transform: translate3d(40px, -40px, -120px);
+	}
+}
