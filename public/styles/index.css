@@ -21,8 +21,9 @@ SASS: sass --watch sass/index.scss:public/styles/index.css
 /* 1.2.  Core properties */
 html, body {
   box-sizing: border-box;
-  color: #686868;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  color: #3C3C3C;
+  font-family: 'Muli', sans-serif;
+  margin: 0; }
 
 .container {
   margin-top: 4rem;
@@ -39,34 +40,80 @@ nav {
   left: 0;
   position: fixed;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  padding: 4rem 6rem; }
+  nav .btn {
+    background-image: linear-gradient(#2040E1, #3358ED);
+    border-radius: 40px;
+    box-shadow: -12px 10px 15px 0 rgba(0, 0, 0, 0.1);
+    color: white;
+    cursor: hand;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 24px;
+    letter-spacing: .04rem;
+    padding: 1rem 2rem;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+    background-image: none;
+    background-color: white;
+    box-shadow: none;
+    color: #4568E7; }
+    nav .btn:hover {
+      background-color: #fafafa; }
+    nav .btn.active {
+      box-shadow: -12px 10px 15px 0 rgba(0, 0, 0, 0.1); }
+  nav .nav-item {
+    font-size: 24px; }
 
 * {
   box-sizing: inherit; }
 
 h1 {
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 36px;
+  font-weight: bold;
   margin: 0; }
 
 p {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 26px;
   margin: .2rem 0 0 0; }
 
 a {
-  color: #077EFF;
-  font-size: 13px;
-  font-weight: 400;
+  color: #4568E7;
+  font-size: 20px;
   text-decoration: none; }
 
 ul {
-  font-size: 13px;
+  font-size: 20px;
   list-style: none;
   margin: .4rem 0 2rem 0;
   padding: 0; }
   ul li {
-    display: inline-block; }
+    padding: 1rem 0;
+    font-weight: normal; }
+    ul li.bold {
+      font-weight: bold; }
+
+label {
+  font-size: 22px; }
+
+.btn {
+  background-image: linear-gradient(#2040E1, #3358ED);
+  border-radius: 40px;
+  box-shadow: -12px 10px 15px 0 rgba(0, 0, 0, 0.1);
+  color: white;
+  cursor: hand;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 24px;
+  letter-spacing: .04rem;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: none;
+  white-space: nowrap; }
+  .btn:hover {
+    background-color: #fafafa; }
 
 /* 1.3. Helpers */
 /* 2 --------------------------- SECTIONS --------------------------- */
@@ -76,15 +123,19 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center; }
-
-.container section:nth-child(1) {
-  background: hotpink;
-  color: white; }
-
-.container section:nth-child(2) {
-  background: azure; }
-
-.container section:nth-child(3) {
-  background: blanchedalmond; }
+  .container section .w-50 {
+    width: 50%; }
+    .container section .w-50.image {
+      border-top-right-radius: 20%;
+      border-bottom-right-radius: 20%;
+      overflow: hidden;
+      margin-right: 3rem; }
+      .container section .w-50.image img {
+        width: 100%;
+        height: auto; }
+      .container section .w-50.image .bank {
+        background-size: cover;
+        height: inherit;
+        width: inherit; }
 
 /*# sourceMappingURL=index.css.map */

@@ -8,24 +8,30 @@ SASS: sass --watch sass/index.scss:public/styles/index.css
 /* 1 --------------------------- CORE --------------------------- */
 
 /* 1.1. Variables */
-// 1.1.1 Colors
-$darkmarble: #495762;
-$fire: #FF6D6D;
-$link: #077EFF;
-$marble: #E7E7E7;
-$sea: #71B5FF;
-$sky: #C7E3FA;
-$sun: #FFBB00;
-$text: #686868;
+
+// links
+$link: #4568E7;
+
+// text
+$text: #3C3C3C;
+$text-small: #555252;
+$text-invert: white;
+
+// labels
+$label-1: #FFCD14;
+$label-2: #2BE7CB;
+$label-3: #FE7A7A;
+
 // gradinets
-$start: #d8d8d8;
-$end: #eee;
+$btn-start: #2040E1;
+$btn-end: #3358ED;
 
 /* 1.2.  Core properties */
 html, body {
   box-sizing: border-box;
   color: $text;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: 'Muli', sans-serif;
+  margin: 0;
 }
 
 .page-wrapper {
@@ -48,34 +54,50 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  padding: 4rem 6rem;
+  .btn {
+    @include nav-button;
+  }
+  .nav-item {
+    font-size: 24px;
+  }
 }
 * {
   box-sizing: inherit;
 }
 h1 {
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 36px;
+  font-weight: bold;
   margin: 0;
 }
 p {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 26px;
   margin: .2rem 0 0 0;
 }
 a {
   color: $link;
-  font-size: 13px;
-  font-weight: 400;
+  font-size: 20px;
   text-decoration: none;
 }
 ul {
-  font-size: 13px;
+  font-size: 20px;
   list-style: none;
   margin: .4rem 0 2rem 0;
   padding: 0;
   li {
-    display: inline-block;
+    padding: 1rem 0;
+    font-weight: normal;
+    &.bold {
+      font-weight: bold;
+    }
   }
+}
+label {
+  font-size: 22px;
+}
+
+.btn {
+  @include button;
 }
 
 /* 1.3. Helpers */
@@ -87,23 +109,34 @@ ul {
 /* 2 --------------------------- SECTIONS --------------------------- */
 
 
-
 .container section {
   scroll-snap-align: start;
   height: inherit;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.container section:nth-child(1) {
-  background: hotpink;
-  color: white;
-}
-.container section:nth-child(2) {
-  background: azure;
-}
-.container section:nth-child(3) {
-  background: blanchedalmond;
+  .w-50 {
+    width: 50%;
+    // section 1
+    &.image {
+      border-top-right-radius: 20%;
+      border-bottom-right-radius: 20%;
+      overflow: hidden;
+      margin-right: 3rem;
+      // background-color: red;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      .bank {
+        // background: url('../hero/bank.png') no-repeat;
+        background-size: cover;
+        height: inherit;
+        width: inherit;
+
+      }
+    }
+  }
 }
 
 

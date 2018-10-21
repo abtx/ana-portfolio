@@ -1,54 +1,42 @@
+
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
 @mixin button {
-  background-color: #999;
+  background-image: linear-gradient($btn-start, $btn-end);
   border-radius: 40px;
-  cursor: pointer;
+  box-shadow: -12px 10px 15px 0 rgba(0,0,0,0.10);
+  color: $text-invert;
   cursor: hand;
+  cursor: pointer;
   display: inline-block;
-  font-size: 13px;
-  font-weight: 100;
-  letter-spacing: .02rem;
-  overflow: hidden;
+  font-size: 24px;
+  letter-spacing: .04rem;
   padding: 1rem 2rem;
   position: relative;
   text-decoration: none;
-  // transition: background 0.2s, color 0.2s;
-  span {
-    padding-left: 1.4rem;
-  }
-  &:before {
-    content: '';
-    background: url('../images/icon/paper_plane.svg') no-repeat top left;
-    height: 1.3rem;
-    position: absolute;
-    opacity: 1;
-    left: 1.4rem;
-    top: .9rem;
-    width: 1.3rem;
-  }
-  &:after {
-    content: '';
-    background: url('../images/icon/paper_plane.svg') no-repeat top left;
-    height: 1.3rem;
-    position: absolute;
-    left: 1.4rem;
-    top: .9rem;
-    opacity: 0;
-    width: 1.3rem;
-  }
-  &:hover {
-    // background-color: $sun;
-    box-shadow: inset -2px -6px 20px 0px rgba(86, 73, 61, 0.1);
-    transition: all .2s ease-in-out;
-    &:before {
-      animation: plane_out .3s ease-in-out forwards;
-      -webkit-animation: plane_out .3s ease-in-out forwards;
-    }
-    &:after {
-      animation: plane_in .3s ease-in-out forwards;
-      -webkit-animation: plane_in .3s ease-in-out forwards;
-    }
+  white-space: nowrap;
+ &:hover {
+   background-color: darken(white, 2);
+ }
+
+}
+
+@mixin nav-button {
+  @include button;
+  background-image: none;
+  background-color: white;
+  box-shadow: none;
+  color: $link;
+  &.active {
+    box-shadow: -12px 10px 15px 0 rgba(0,0,0,0.10);
   }
 }
+
+
 @keyframes plane_in {
 	from {
     opacity: 0;
