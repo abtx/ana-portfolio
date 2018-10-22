@@ -36,7 +36,7 @@ html, body {
 }
 
 #container {
-  padding-top: 4rem;
+  padding-top: 6rem;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   border-radius: 8px;
@@ -214,7 +214,7 @@ div.break, div.cta, div.footer {
 /* 3 --------------------------- PROJECT DETAILS --------------------------- */
 
 #project-container {
-  position: relative;
+  position: absolute;
   opacity: 0;
   transition: all .25s ease-in-out;
   transform: scale(.75) translateY(10vh);
