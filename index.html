@@ -8,17 +8,21 @@
     <meta name="keywords" content="user interface, design, user experience, ux, digital, edinburgh, service design, product design, glasgow school of art, anka, anna, janas">
     <meta name="description" content="User Interface Designer">
     <meta name="author" content="Anka Janas">
+    <!--  Styles & fonts -->
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link rel="stylesheet" href="public/styles/index.css">
+    <link rel="stylesheet" href="public/styles/helpers.css">
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="public/scripts/index.js" charset="utf-8"></script>
   </head>
   <body>
-    <!-- <div class="page-wrapper"> -->
       <nav>
           <span class="nav-item btn active">design portfolio</span>
           <span class="nav-item">anka janas</span>
           <span><a href="#" class="nav-item">about me</a></span>
       </nav>
-      <div class="container">
+      <div id="container">
         <!-- Bank -->
         <section>
           <div class="w-50 hero left">
@@ -37,7 +41,7 @@
               <li>prototyping and user testing</li>
             </ul>
             <div class="cta-container">
-              <div class="btn">
+              <div class="btn" onClick="handleBank(event)">
                 Find out more
               </div>
             </div>
@@ -161,6 +165,8 @@
         </div>
 
       </div> <!-- container -->
-    <!-- </div> -->
+
+      <div id="project-container">
+      </div>
   </body>
 </html>

@@ -26,7 +26,7 @@ html, body {
   margin: 0;
   height: 100%; }
 
-.container {
+#container {
   padding-top: 4rem;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -139,48 +139,47 @@ label {
     .cta-container .btn:hover {
       background: #2a50ec; }
 
-/* 1.3. Helpers */
 /* 2 --------------------------- SECTIONS --------------------------- */
-.container section {
+#container section {
   scroll-snap-align: center;
   height: 66vh;
   display: flex;
   justify-content: center;
   align-items: center; }
-  .container section .w-50 {
+  #container section .w-50 {
     width: 50%;
     padding: 6rem; }
-    .container section .w-50.hero {
+    #container section .w-50.hero {
       overflow: hidden;
       padding: 0;
       height: 70%;
       width: 50%; }
-      .container section .w-50.hero.left {
+      #container section .w-50.hero.left {
         border-top-right-radius: 6rem;
         border-bottom-right-radius: 6rem;
         margin-right: 6rem; }
-      .container section .w-50.hero.right {
+      #container section .w-50.hero.right {
         border-top-left-radius: 6rem;
         border-bottom-left-radius: 6rem;
         margin-left: 6rem; }
-      .container section .w-50.hero .bg-img {
+      #container section .w-50.hero .bg-img {
         display: block;
         height: 100%;
         width: 100%; }
-      .container section .w-50.hero .bank {
-        background: url("../hero/bank.png") no-repeat;
+      #container section .w-50.hero .bank {
+        background: url("../hero/bank.png") no-repeat center center;
         background-size: cover; }
-      .container section .w-50.hero .mimo {
-        background: url("../hero/mimo.png") no-repeat;
+      #container section .w-50.hero .mimo {
+        background: url("../hero/mimo.png") no-repeat center center;
         background-size: cover; }
-      .container section .w-50.hero .nhs {
-        background: url("../hero/nhs.png") no-repeat;
+      #container section .w-50.hero .nhs {
+        background: url("../hero/nhs.png") no-repeat center center;
         background-size: cover; }
-      .container section .w-50.hero .social {
-        background: url("../hero/social.png") no-repeat;
+      #container section .w-50.hero .social {
+        background: url("../hero/social.png") no-repeat center center;
         background-size: cover; }
-      .container section .w-50.hero .storytelling {
-        background: url("../hero/storytelling.png") no-repeat;
+      #container section .w-50.hero .storytelling {
+        background: url("../hero/storytelling.png") no-repeat center center;
         background-size: cover; }
 
 div.break, div.cta, div.footer {
@@ -198,5 +197,24 @@ div.break, div.cta, div.footer {
       padding: 0 1rem; }
   div.break.footer, div.cta.footer, div.footer.footer {
     padding: 2rem 0; }
+
+/* 3 --------------------------- PROJECT DETAILS --------------------------- */
+#project-container {
+  position: relative;
+  opacity: 0;
+  transition: all .25s ease-in-out;
+  transform: scale(0.75) translateY(10vh); }
+  #project-container.active {
+    background-color: white;
+    display: block;
+    left: 0;
+    transform: scale(1) translateY(0);
+    opacity: 1;
+    min-height: 100vh;
+    position: fixed;
+    margin-top: 2rem;
+    top: 0;
+    width: 100%;
+    z-index: 400; }
 
 /*# sourceMappingURL=index.css.map */
