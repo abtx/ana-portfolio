@@ -1,0 +1,128 @@
+/*
+Copyright Artur Janas
+SASS: sass --watch sass/core.scss:public/styles/core.css
+*/
+
+
+@import "mixins.scss";
+
+/* --------------------------- CORE --------------------------- */
+
+/* 1.1. Variables */
+
+// links
+$link: #4568E7;
+
+// text
+$text: #3C3C3C;
+$text-secondary: #555252;
+$text-invert: white;
+
+// labels
+$label-1: #FFCD14;
+$label-2: #2BE7CB;
+$label-3: #FE7A7A;
+
+// gradinets
+$btn-start: #2040E1;
+$btn-end: #3358ED;
+
+/* 1.2.  Core properties */
+html, body {
+  box-sizing: border-box;
+  color: $text;
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+  height: 100%;
+}
+
+#container {
+  padding-top: 6rem;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  border-radius: 8px;
+  height: 100vh;
+}
+nav {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  height: 2rem;
+  justify-content: space-between;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 4rem 6rem;
+  z-index: 100;
+  .btn {
+    @include nav-button;
+  }
+  .nav-item {
+    font-size: 22px;
+    padding: 1rem 2rem;
+  }
+}
+* {
+  box-sizing: inherit;
+}
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 1rem 0;
+}
+.h1-underline {
+  display: block;
+  position: relative;
+  margin-bottom: 3rem;
+  &:after {
+    content: '';
+    background-color: $text;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 0rem;
+    width: 12rem;
+  }
+}
+p {
+  font-size: 26px;
+  margin: .2rem 0 0 0;
+}
+a {
+  color: $link;
+  font-size: 20px;
+  text-decoration: none;
+}
+ul {
+  font-size: 16px;
+  list-style: none;
+  margin: .4rem 0 2rem 0;
+  padding: 0;
+  li {
+    color: $text;
+    padding: .5rem 0;
+    color: $text-secondary;
+    &.bold {
+      color: $text;
+      font-weight: bold;
+    }
+  }
+}
+label {
+  font-size: 22px;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: center;
+  .btn {
+    @include button;
+  }
+}
+
+
+
+@media (max-width: 960px) {
+
+}

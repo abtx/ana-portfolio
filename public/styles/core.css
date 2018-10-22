@@ -1,0 +1,142 @@
+/*
+Copyright Artur Janas
+SASS: sass --watch sass/core.scss:public/styles/core.css
+*/
+@keyframes plane_in {
+  from {
+    opacity: 0;
+    transform: translate3d(-40px, 40px, -120px); }
+  to {
+    opacity: 1;
+    transform: translate3d(0 0 0); } }
+@keyframes plane_out {
+  from {
+    opacity: 1;
+    transform: translate3d(0 0 0); }
+  to {
+    opacity: 0;
+    transform: translate3d(40px, -40px, -120px); } }
+/* --------------------------- CORE --------------------------- */
+/* 1.1. Variables */
+/* 1.2.  Core properties */
+html, body {
+  box-sizing: border-box;
+  color: #3C3C3C;
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+  height: 100%; }
+
+#container {
+  padding-top: 6rem;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  border-radius: 8px;
+  height: 100vh; }
+
+nav {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  height: 2rem;
+  justify-content: space-between;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 4rem 6rem;
+  z-index: 100; }
+  nav .btn {
+    background-image: linear-gradient(#2040E1, #3358ED);
+    border-radius: 40px;
+    box-shadow: -12px 10px 15px 0 rgba(0, 0, 0, 0.1);
+    color: white;
+    cursor: hand;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    letter-spacing: .04rem;
+    padding: 1rem 2rem;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+    background-image: none;
+    background-color: white;
+    box-shadow: none;
+    color: #4568E7; }
+    nav .btn:hover {
+      background: #2a50ec; }
+    nav .btn.active {
+      box-shadow: -12px 10px 15px 0 rgba(0, 0, 0, 0.1); }
+      nav .btn.active:hover {
+        background-color: #fafafa; }
+  nav .nav-item {
+    font-size: 22px;
+    padding: 1rem 2rem; }
+
+* {
+  box-sizing: inherit; }
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 0 1rem 0; }
+
+.h1-underline {
+  display: block;
+  position: relative;
+  margin-bottom: 3rem; }
+  .h1-underline:after {
+    content: '';
+    background-color: #3C3C3C;
+    height: 2px;
+    left: 0;
+    position: absolute;
+    top: 0rem;
+    width: 12rem; }
+
+p {
+  font-size: 26px;
+  margin: .2rem 0 0 0; }
+
+a {
+  color: #4568E7;
+  font-size: 20px;
+  text-decoration: none; }
+
+ul {
+  font-size: 16px;
+  list-style: none;
+  margin: .4rem 0 2rem 0;
+  padding: 0; }
+  ul li {
+    color: #3C3C3C;
+    padding: .5rem 0;
+    color: #555252; }
+    ul li.bold {
+      color: #3C3C3C;
+      font-weight: bold; }
+
+label {
+  font-size: 22px; }
+
+.cta-container {
+  display: flex;
+  justify-content: center; }
+  .cta-container .btn {
+    background-image: linear-gradient(#2040E1, #3358ED);
+    border-radius: 40px;
+    box-shadow: -12px 10px 15px 0 rgba(0, 0, 0, 0.1);
+    color: white;
+    cursor: hand;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    letter-spacing: .04rem;
+    padding: 1rem 2rem;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap; }
+    .cta-container .btn:hover {
+      background: #2a50ec; }
+
+/*# sourceMappingURL=core.css.map */

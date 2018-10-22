@@ -10,6 +10,7 @@
     <meta name="author" content="Anka Janas">
     <!--  Styles & fonts -->
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link rel="stylesheet" href="public/styles/core.css">
     <link rel="stylesheet" href="public/styles/index.css">
     <link rel="stylesheet" href="public/styles/about.css">
     <!-- Scripts -->
@@ -166,7 +167,16 @@
 
       </div> <!-- container -->
 
-      <div id="project-container">
+      <div id="project-overlay-wrapper">
+        <div class="project-overlay-container">
+          I'm a nav<a onClick="closeOveraly()">close</a>
+          <div class="project-details bank">
+            I'm a bank
+          </div>
+          <div class="project-details nhs">
+            I'm nhs
+          </div>
+        </div>
       </div>
   </body>
 </html>

@@ -1,23 +1,44 @@
 // (function() {
 // })();
+$(document).keyup(function(e) {
+     if (e.key === 'Escape') { // escape key maps to keycode `27`
+       hideDetails();
+    }
+});
 
-
-// bank
-var loadedBank = false;
+// handling bank
 var handleBank = function() {
-  // $('#container').addClass('animate-out');
-  if (loadedBank === false) {
-    $('#project-container').load('ajax/bank.html', function() {
-      console.log('loaded');
-      loadedBank = true;
-    }).addClass('active');
-  } else {
-    $('#project-container').addClass('active');
-  }
+  showDetails();
+  setActiveProject('.bank');
+};
+
+
+// common functions
+
+var setActiveProject = function(project) {
+  $('.project-details' + project).addClass('active');
+
+};
+
+var setInactiveProject = function(project) {
+  $('.project-details' + project).removeClass('active');
 };
 
 var closeOveraly = function() {
-  console.log(closeOveraly);
-  // $('#container').removeClass('animate-out');
-  $('#project-container').removeClass('active');
+  hideDetails();
+};
+
+var showDetails = function() {
+  $('#project-overlay-wrapper').css({'display':'block'});
+  setTimeout(function(){
+    $('#project-overlay-wrapper').addClass('active');
+  },10);
+};
+
+var hideDetails = function() {
+  $('#project-overlay-wrapper').removeClass('active');
+
+  setTimeout(function(){
+    $('#project-overlay-wrapper').css({'display':'none'});
+  },251);
 };
