@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="public/styles/core.css">
     <link rel="stylesheet" href="public/styles/index.css">
     <link rel="stylesheet" href="public/styles/about.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="public/scripts/index.js" charset="utf-8"></script>
@@ -169,12 +170,67 @@
 
       <div id="project-overlay-wrapper">
         <div class="project-overlay-container">
-          I'm a nav<a onClick="closeOveraly()">close</a>
-          <div class="project-details bank">
-            I'm a bank
+
+          <!-- nav -->
+          <a onClick="closeOveraly()">
+            <i class="fas fa-times"></i>
+            <span>exit</span>
+          </a>
+
+          <div class="d-flex justify-content-between">
+            <a onClick="prevProject()">
+              <i class="fas fa-chevron-left"></i>
+              prev
+            </a>
+
+            <a onClick="nextProject()">
+              <i class="fas fa-chevron-right"></i>
+              next
+            </a>
           </div>
+
+          <!-- bank details -->
+          <div class="project-details bank">
+            <section>
+              <div class="w-100">
+                <h1>Modern banking appt</h1>
+                <span class="h1-underline"></span>
+                <ul>
+                  <li>ux design</li>
+                  <li>ui design</li>
+                  <li>motion design</li>
+                  <li>prototyping and user testing</li>
+                </ul>
+                <div class="labels-container">
+
+                </div>
+              </div>
+              <div class="w-100">
+                <h1>Objective</h1>
+                <span class="h1-underline"></span>
+              </div>
+            </section>
+
+          </div>
+
+          <!-- mimo details -->
+          <div class="project-details mimo">
+            I'm mimo
+          </div>
+
+          <!-- nhs details -->
           <div class="project-details nhs">
             I'm nhs
+          </div>
+
+          <!-- social details -->
+          <div class="project-details social">
+            I'm social
+          </div>
+
+          <!-- storytelling details -->
+          <div class="project-details storytelling">
+            I'm storytelling
           </div>
         </div>
       </div>

@@ -100,7 +100,9 @@ p {
 
 a {
   color: #4568E7;
-  font-size: 20px;
+  cursor: pointer;
+  cursor: hand;
+  font-size: 16px;
   text-decoration: none; }
 
 ul {
@@ -138,5 +140,20 @@ label {
     white-space: nowrap; }
     .cta-container .btn:hover {
       background: #2a50ec; }
+
+.w-50 {
+  width: 50%; }
+
+.w-100 {
+  width: 100%; }
+
+.d-flex {
+  display: flex; }
+
+.justify-content-between {
+  justify-content: space-between; }
+
+.align-items-center {
+  align-items: center; }
 
 /*# sourceMappingURL=core.css.map */

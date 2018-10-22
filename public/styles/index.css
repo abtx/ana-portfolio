@@ -93,7 +93,7 @@ div.break, div.cta, div.footer {
     width: 100%;
     z-index: 400; }
   #project-overlay-wrapper .project-overlay-container {
-    padding: 6rem; }
+    padding: 3rem 6rem; }
     #project-overlay-wrapper .project-overlay-container .project-details {
       display: none; }
       #project-overlay-wrapper .project-overlay-container .project-details.active {

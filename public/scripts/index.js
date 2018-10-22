@@ -1,28 +1,59 @@
-// (function() {
-// })();
+
 $(document).keyup(function(e) {
-     if (e.key === 'Escape') { // escape key maps to keycode `27`
-       hideDetails();
-    }
+   if (e.key === 'Escape') { // escape key maps to keycode `27`
+     hideDetails();
+  }
 });
 
-// handling bank
+$(document).ready(function(){
+  // showDetails();
+  // setActiveProject(0);
+});
+
+var activeProject = 0;
+var projects = ['bank', 'mimo', 'nhs', 'social', 'storytelling'];
+
+// handling clicks
+
 var handleBank = function() {
   showDetails();
-  setActiveProject('.bank');
+  setActiveProject(0);
+};
+
+
+// nav
+
+var nextProject = function() {
+
+  if(activeProject < projects.length - 1){
+    activeProject += 1;
+    setActiveProject(activeProject);
+  }
+  else {
+    activeProject = 0;
+    setActiveProject(activeProject);
+  }
+};
+
+var prevProject = function() {
+  if(activeProject > 0) {
+    activeProject -= 1;
+    setActiveProject(activeProject);
+  } else {
+    activeProject = 4;
+    setActiveProject(activeProject);
+  }
 };
 
 
 // common functions
 
-var setActiveProject = function(project) {
-  $('.project-details' + project).addClass('active');
+var setActiveProject = function(activeProject) {
+  $('.project-details').removeClass('active');
+  $('.project-details.' + projects[activeProject]).addClass('active');
 
 };
 
-var setInactiveProject = function(project) {
-  $('.project-details' + project).removeClass('active');
-};
 
 var closeOveraly = function() {
   hideDetails();
