@@ -74,7 +74,7 @@ h1 {
 h2 {
   font-size: 36px;
   font-weight: normal;
-  margin: 3rem 0 1rem 0;
+  margin: 3rem 0 3rem 0;
 }
 .h1-underline {
   display: block;
@@ -114,36 +114,43 @@ ul {
   padding: 0;
   &.w-icons {
     li {
-      padding-left: 4rem;
+      padding-left: 3rem;
       position: relative;
     }
     li:before {
       content: '';
       position: absolute;
       display: block;
-      width: 2rem;
-      height: 2rem;
+      width: 1rem;
+      height: 1rem;
       left: -1rem;
-      padding: .4rem 1.2rem;
+      padding: .5rem 1.2rem 1rem;
+
     }
     // image paths
     li.tiles:before {
       background: url('../icons/tiles.svg') no-repeat center;
+      background-size: 10rem;
     }
     li.view:before {
       background: url('../icons/view.svg') no-repeat center;
+      background-size: 10rem;
     }
     li.chart:before {
       background: url('../icons/chart.svg') no-repeat center;
+      background-size: 10rem;
     }
     li.heart:before {
       background: url('../icons/heart.svg') no-repeat center;
+      background-size: 10rem;
     }
     li.target:before {
       background: url('../icons/target.svg') no-repeat center;
+      background-size: 10rem;
     }
     li.user:before {
       background: url('../icons/user.svg') no-repeat center;
+      background-size: 10rem;
     }
   }
   &.inline {
