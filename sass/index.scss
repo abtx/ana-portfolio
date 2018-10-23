@@ -6,7 +6,7 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
 */
 
 @import "mixins.scss";
-
+@import "core.scss";
 
 /* --------------------------- SECTIONS --------------------------- */
 
@@ -93,6 +93,43 @@ div.break, div.cta, div.footer {
 
 /* 3 --------------------------- PROJECT DETAILS --------------------------- */
 
+#project-overlay-nav {
+  display: none;
+  &.active {
+    .overlay-close,
+    .overlay-next,
+    .overlay-prev {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .overlay-close, .overlay-next, .overlay-prev {
+    position: fixed;
+    font-size: 33px;
+    z-index: 500;
+    opacity: 0;
+    transition: all .25s ease-in-out;
+
+  }
+  .overlay-close {
+    top: 2rem;
+    right: 2rem;
+    transform: translateX(-10rem);
+  }
+  .overlay-next {
+    top: calc(50vh - .5rem);
+    right: 2rem;
+    transform: translateX(-10rem);
+  }
+
+  .overlay-prev {
+    top: calc(50vh - .5rem);
+    left: 2rem;
+    transform: translateX(10rem);
+  }
+}
+
+
 #project-overlay-wrapper {
   position: absolute;
   opacity: 0;
@@ -111,6 +148,7 @@ div.break, div.cta, div.footer {
     width: 100%;
     z-index: 400;
   }
+
   .project-overlay-container {
     padding: 3rem 6rem;
     .project-details {
@@ -119,7 +157,6 @@ div.break, div.cta, div.footer {
         display: block;
       }
     }
-
   }
 
   // labels
@@ -132,7 +169,129 @@ div.break, div.cta, div.footer {
       margin-right: 3rem;
     }
     .description {
-      flex: 4;
+      flex: 6;
+    }
+  }
+
+  .showcase-body {
+    section {
+      display: flex;
+      margin: 3rem 0;
+      padding: 3rem 0;
+      align-items: center;
+
+
+      &.odd-left {
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          width: calc(100vw - 3rem);
+          height: 100%;
+          top: 1.5rem;
+          border-top-right-radius: 6rem;
+          border-bottom-right-radius: 6rem;
+          background-color: $background-box;
+          box-shadow: $background-box-shadow;
+          z-index: -1;
+          left: -6rem;
+        }
+      }
+      &.odd-right {
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          width: calc(100vw - 3rem);
+          height: 100%;
+          top: 1.5rem;
+          border-top-left-radius: 6rem;
+          border-bottom-left-radius: 6rem;
+          background-color: $background-box;
+          box-shadow: $background-box-shadow;
+          z-index: -1;
+          right: -6rem;
+        }
+      }
+
+      ul.w-icons {
+        li:before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          left: -1rem;
+          padding: .5rem 1.2rem 1rem;
+
+        }
+        // image paths
+        li.tiles:before {
+          background: url('../icons/tiles.svg') no-repeat center;
+          background-size: 10rem;
+        }
+        li.view:before {
+          background: url('../icons/view.svg') no-repeat center;
+          background-size: 10rem;
+        }
+        li.chart:before {
+          background: url('../icons/chart.svg') no-repeat center;
+          background-size: 10rem;
+        }
+        li.heart:before {
+          background: url('../icons/heart.svg') no-repeat center;
+          background-size: 10rem;
+        }
+        li.target:before {
+          background: url('../icons/target.svg') no-repeat center;
+          background-size: 10rem;
+        }
+        li.user:before {
+          background: url('../icons/user.svg') no-repeat center;
+          background-size: 10rem;
+        }
+      }
+
+      .w-50 {
+        width: 50%;
+        height: 60vh;
+        &.hero {
+          overflow: hidden;
+          // margin-top: 3rem;
+          .bg-img {
+            display: block;
+            height: 100%;
+            width: 100%;
+            &.hierarchy {
+              background: url('../bank/hierarchy.png') no-repeat center center;
+              background-size: contain;
+            }
+            &.user-oriented {
+              background: url('../bank/user-oriented.png') no-repeat center center;
+              background-size: contain;
+            }
+            &.responsive {
+              background: url('../bank/responsive.png') no-repeat center center;
+              background-size: contain;
+            }
+            &.transparent {
+              background: url('../bank/transparent.png') no-repeat center center;
+              background-size: contain;
+            }
+            &.engaging {
+              background: url('../bank/engaging.png') no-repeat center center;
+              background-size: contain;
+            }
+            &.organised {
+              background: url('../bank/organised.png') no-repeat center center;
+              background-size: contain;
+            }
+          }
+
+        }
+      }
+
+
     }
   }
 }

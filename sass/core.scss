@@ -27,6 +27,10 @@ $label-3: #FE7A7A;
 $btn-start: #2040E1;
 $btn-end: #3358ED;
 
+// backgrounds
+$background-box: #F9FCFF;
+$background-box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
+
 /* 1.2.  Core properties */
 html, body {
   box-sizing: border-box;
@@ -40,7 +44,6 @@ html, body {
   padding-top: 6rem;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  border-radius: 8px;
   height: 100vh;
 }
 nav {
@@ -117,41 +120,7 @@ ul {
       padding-left: 3rem;
       position: relative;
     }
-    li:before {
-      content: '';
-      position: absolute;
-      display: block;
-      width: 1rem;
-      height: 1rem;
-      left: -1rem;
-      padding: .5rem 1.2rem 1rem;
-
-    }
-    // image paths
-    li.tiles:before {
-      background: url('../icons/tiles.svg') no-repeat center;
-      background-size: 10rem;
-    }
-    li.view:before {
-      background: url('../icons/view.svg') no-repeat center;
-      background-size: 10rem;
-    }
-    li.chart:before {
-      background: url('../icons/chart.svg') no-repeat center;
-      background-size: 10rem;
-    }
-    li.heart:before {
-      background: url('../icons/heart.svg') no-repeat center;
-      background-size: 10rem;
-    }
-    li.target:before {
-      background: url('../icons/target.svg') no-repeat center;
-      background-size: 10rem;
-    }
-    li.user:before {
-      background: url('../icons/user.svg') no-repeat center;
-      background-size: 10rem;
-    }
+    // see index css for paths
   }
   &.inline {
     display: inline-flex;

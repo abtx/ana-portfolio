@@ -6,8 +6,8 @@ $(document).keyup(function(e) {
 });
 
 $(document).ready(function(){
-  showDetails();
-  setActiveProject(0);
+  // showDetails();
+  // setActiveProject(0);
 });
 
 var activeProject = 0;
@@ -61,15 +61,18 @@ var closeOveraly = function() {
 
 var showDetails = function() {
   $('#project-overlay-wrapper').css({'display':'block'});
+  $('#project-overlay-nav').css({'display':'block'});
   setTimeout(function(){
     $('#project-overlay-wrapper').addClass('active');
+    $('#project-overlay-nav').addClass('active');
   },10);
 };
 
 var hideDetails = function() {
   $('#project-overlay-wrapper').removeClass('active');
-
+  $('#project-overlay-nav').removeClass('active');
   setTimeout(function(){
     $('#project-overlay-wrapper').css({'display':'none'});
+    $('#project-overlay-nav').css({'display':'none'});
   },251);
 };
