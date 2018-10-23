@@ -79,12 +79,19 @@ nav {
 h1 {
   font-size: 36px;
   font-weight: bold;
-  margin: 0 0 1rem 0; }
+  margin: 3rem 0 1rem 0; }
+
+h2 {
+  font-size: 36px;
+  font-weight: normal;
+  margin: 3rem 0 1rem 0; }
 
 .h1-underline {
   display: block;
   position: relative;
   margin-bottom: 3rem; }
+  .h1-underline.xs {
+    margin-bottom: 1.8rem; }
   .h1-underline:after {
     content: '';
     background-color: #3C3C3C;
@@ -95,8 +102,10 @@ h1 {
     width: 12rem; }
 
 p {
-  font-size: 26px;
+  font-size: 18px;
   margin: .2rem 0 0 0; }
+  p.xs {
+    font-size: 14px; }
 
 a {
   color: #4568E7;
@@ -110,6 +119,33 @@ ul {
   list-style: none;
   margin: .4rem 0 2rem 0;
   padding: 0; }
+  ul.w-icons li {
+    padding-left: 4rem;
+    position: relative; }
+  ul.w-icons li:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    left: -1rem;
+    padding: .4rem 1.2rem; }
+  ul.w-icons li.tiles:before {
+    background: url("../icons/tiles.svg") no-repeat center; }
+  ul.w-icons li.view:before {
+    background: url("../icons/view.svg") no-repeat center; }
+  ul.w-icons li.chart:before {
+    background: url("../icons/chart.svg") no-repeat center; }
+  ul.w-icons li.heart:before {
+    background: url("../icons/heart.svg") no-repeat center; }
+  ul.w-icons li.target:before {
+    background: url("../icons/target.svg") no-repeat center; }
+  ul.w-icons li.user:before {
+    background: url("../icons/user.svg") no-repeat center; }
+  ul.inline {
+    display: inline-flex; }
+    ul.inline li {
+      padding-right: 1rem; }
   ul li {
     color: #3C3C3C;
     padding: .5rem 0;
@@ -118,8 +154,17 @@ ul {
       color: #3C3C3C;
       font-weight: bold; }
 
-label {
-  font-size: 22px; }
+.label {
+  font-size: 16px;
+  padding: .3rem 1.3rem;
+  display: inline-block;
+  color: white;
+  border-radius: 2rem;
+  text-align: center; }
+  .label.teal {
+    background-color: #FFCD14; }
+  .label.yellow {
+    background-color: #2BE7CB; }
 
 .cta-container {
   display: flex;

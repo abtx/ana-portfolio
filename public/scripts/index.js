@@ -6,8 +6,8 @@ $(document).keyup(function(e) {
 });
 
 $(document).ready(function(){
-  // showDetails();
-  // setActiveProject(0);
+  showDetails();
+  setActiveProject(0);
 });
 
 var activeProject = 0;
