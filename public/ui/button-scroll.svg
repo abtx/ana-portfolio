@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="105px" viewBox="0 0 120 105" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>ScrollNew</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="0%" x2="37.1780269%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#2040E1" offset="0%"></stop>
+            <stop stop-color="#3358ED" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0.957670154" y="0.0303457145" width="80" height="80" rx="40"></rect>
+        <filter x="-50.6%" y="-23.1%" width="171.2%" height="171.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="-12" dy="10" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="7.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="ScrollNew" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="FindOutMoreButton" transform="translate(28.231132, 5.969654)">
+            <g id="CTAbck">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+            </g>
+        </g>
+        <polyline id="Path" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" transform="translate(68.731132, 46.469654) rotate(-180.000000) translate(-68.731132, -46.469654) " points="53.2169669 54.2267366 68.7311316 38.712572 84.2452962 54.2267366"></polyline>
+    </g>
+</svg>

@@ -7,7 +7,7 @@ $(document).keyup(function(e) {
 
 $(document).ready(function(){
   // showDetails();
-  // setActiveProject(0);
+  // setActiveProject(1);
 });
 
 var activeProject = 0;
@@ -15,9 +15,9 @@ var projects = ['bank', 'mimo', 'nhs', 'social', 'storytelling'];
 
 // handling clicks
 
-var handleBank = function() {
+var handleClick = function(active) {
   showDetails();
-  setActiveProject(0);
+  setActiveProject(active);
 };
 
 
