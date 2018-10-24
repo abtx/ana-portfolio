@@ -102,9 +102,11 @@ h2 {
 
 p {
   font-size: 18px;
-  margin: .2rem 0 0 0; }
+  margin: .2rem 0 0 0;
+  line-height: 2.5rem; }
   p.xs {
-    font-size: 14px; }
+    font-size: 14px;
+    line-height: normal; }
 
 a {
   color: #4568E7;

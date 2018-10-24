@@ -99,9 +99,10 @@ h2 {
 p {
   font-size: 18px;
   margin: .2rem 0 0 0;
-  // max-width: 70vw;
+  line-height: 2.5rem;
   &.xs {
     font-size: 14px;
+    line-height: normal;
   }
 }
 a {

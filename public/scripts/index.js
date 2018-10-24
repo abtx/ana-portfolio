@@ -6,13 +6,12 @@ $(document).keyup(function(e) {
 });
 
 $(document).ready(function(){
-  showDetails();
-  setActiveProject(4);
+  // showDetails();
+  // setActiveProject(4);
 });
 
-var activeProject = 0;
 var projects = ['bank', 'mimo', 'nhs', 'social', 'storytelling'];
-
+var activeProject;
 // handling clicks
 
 var handleClick = function(active) {
@@ -29,18 +28,13 @@ var nextProject = function() {
     activeProject += 1;
     setActiveProject(activeProject);
   }
-  else {
-    activeProject = 0;
-    setActiveProject(activeProject);
-  }
+
 };
 
 var prevProject = function() {
+
   if(activeProject > 0) {
     activeProject -= 1;
-    setActiveProject(activeProject);
-  } else {
-    activeProject = 4;
     setActiveProject(activeProject);
   }
 };
@@ -48,10 +42,20 @@ var prevProject = function() {
 
 // common functions
 
-var setActiveProject = function(activeProject) {
-  $('.project-details').removeClass('active');
-  $('.project-details.' + projects[activeProject]).addClass('active');
+var setActiveProject = function(index) {
 
+  activeProject = index;
+
+  $('.project-details').removeClass('active');
+  $('.project-details.' + projects[index]).addClass('active');
+
+  $('.overlay-prev').show();
+  $('.overlay-next').show();
+  if(index > projects.length - 2) {
+    $('.overlay-next').hide();
+  } else if (index < 1) {
+    $('.overlay-prev').hide();
+  }
 };
 
 
@@ -60,8 +64,8 @@ var closeOveraly = function() {
 };
 
 var showDetails = function() {
-  $('#project-overlay-wrapper').css({'display':'block'});
-  $('#project-overlay-nav').css({'display':'block'});
+  $('#project-overlay-wrapper').css({'display':'flex'});
+  $('#project-overlay-nav').css({'display':'inline'});
   setTimeout(function(){
     $('#project-overlay-wrapper').addClass('active');
     $('#project-overlay-nav').addClass('active');

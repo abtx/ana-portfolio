@@ -14,9 +14,11 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
 #container section {
   align-items: center;
   display: flex;
-  height: 50vh;
+  height: 60vh;
   justify-content: center;
-  margin-top: 4rem;
+  &:first-of-type {
+    margin-top: 4rem;
+  }
   // scroll-snap-align: center;
   .w-50 {
     width: 50%;
@@ -38,7 +40,8 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
       }
     }
     &.hero {
-      height: 80%;
+      box-shadow: $background-box-shadow;
+      height: 100%;
       overflow: hidden;
       padding: 0;
       width: 50%;
@@ -50,7 +53,7 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
       // section 1
       .bank {
         background: url('../hero/bank.png') no-repeat center center;
-        background-size: cover;
+        background-size: 150%;
       }
       // section 2
       .mimo {
@@ -101,61 +104,66 @@ div.break, div.cta, div.footer {
 
 #project-overlay-nav {
   display: none;
+  height: 100vh;
+  opacity: 0;
+  position: relative;
+  transform: scale(.75);
+  transition: all .25s ease-in-out;
+  z-index: 500;
   &.active {
-    .overlay-close,
-    .overlay-next,
-    .overlay-prev {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  .overlay-close, .overlay-next, .overlay-prev {
-    position: fixed;
-    font-size: 33px;
-    z-index: 500;
-    opacity: 0;
-    transition: all .25s ease-in-out;
-
+    opacity: 1;
+    transform: scale(1);
   }
   .overlay-close {
+    position: fixed;
     top: 2rem;
     right: 2rem;
-    transform: translateX(-10rem);
-  }
-  .overlay-next {
-    top: calc(50vh - .5rem);
-    right: 2rem;
-    transform: translateX(-10rem);
+    i {
+      font-size: 2rem;
+    }
   }
 
+  .overlay-prev, .overlay-next, .overlay-close {
+    background-color: white;
+    border-radius: 6rem;
+    box-shadow: $background-box-shadow;
+    padding: .4rem 1rem;
+  }
   .overlay-prev {
-    top: calc(50vh - .5rem);
+    position: fixed;
     left: 2rem;
-    transform: translateX(10rem);
+    bottom: 2rem;
+  }
+
+  .overlay-next {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
   }
 }
 
-
 #project-overlay-wrapper {
-  position: absolute;
-  opacity: 0;
+  background-color: white;
   display: none;
-  transition: all .25s ease-in-out;
+  flex-direction: column;
+  justify-content: space-between;
+  left: 0;
+  height: 100vh;
+  opacity: 0;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
   transform: scale(.75) translateY(10vh);
+  transition: all .25s ease-in-out;
+  width: 100%;
+  z-index: 400;
   &.active {
-    background-color: white;
-    left: 0;
-    transform: scale(1) translateY(0);
     opacity: 1;
-    overflow-y: scroll;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 400;
+    transform: scale(1) translateY(0);
   }
 
   .project-overlay-container {
+
     padding: 3rem 6rem;
     .project-details {
       display: none;
