@@ -30,6 +30,7 @@ $btn-end: #3358ED;
 // backgrounds
 $background-box: #F9FCFF;
 $background-box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
+$background-box-shadow-wide: 0px 31px 31px rgba(0, 0, 0, 0.02);
 
 /* 1.2.  Core properties */
 html, body {
@@ -49,6 +50,7 @@ html, body {
 nav {
   align-items: center;
   background-color: white;
+  box-shadow: $background-box-shadow-wide;
   display: flex;
   height: 2rem;
   justify-content: space-between;
@@ -161,6 +163,7 @@ ul {
 .cta-container {
   display: flex;
   justify-content: center;
+  margin-top: 5rem;
   .btn {
     @include button;
   }

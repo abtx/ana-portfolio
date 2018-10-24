@@ -78,5 +78,5 @@ var hideDetails = function() {
   setTimeout(function(){
     $('#project-overlay-wrapper').css({'display':'none'});
     $('#project-overlay-nav').css({'display':'none'});
-  },251);
+  },651);
 };
