@@ -144,6 +144,7 @@ div.break, div.cta, div.footer {
 
 #project-overlay-wrapper {
   background-color: white;
+  box-shadow: $background-box-shadow;
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -153,23 +154,41 @@ div.break, div.cta, div.footer {
   overflow-y: scroll;
   position: fixed;
   top: 0;
-  transform: scale(.9) translateY(30vh);
-  transition: all .65s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: scale(.9) translateY(30vh) skew(6deg);
+  transition: all .65s cubic-bezier(0.19, 1, 0.22, 1);
   width: 100%;
   z-index: 400;
   &.active {
     opacity: 1;
-    transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0) skew(0deg);
   }
 
-  .project-overlay-container {
+  width: 100vw;
+  overflow-x: hidden;
 
+  .project-overlay-container {
+    width: 500vw;
     padding: 3rem 6rem;
+    display: block;
+    overflow: hidden;
     .project-details {
       display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all .65s cubic-bezier(0.19, 1, 0.22, 1);
+      transform: translateX(0);
+
       &.active {
         display: block;
       }
+      &.out-left {
+        transform: translateX(-100vw);
+      }
+      &.out-right {
+        transform: translateX(50vw);
+      }
+
     }
   }
 

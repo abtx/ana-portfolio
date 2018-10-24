@@ -316,6 +316,7 @@ div.break, div.cta, div.footer {
 
 #project-overlay-wrapper {
   background-color: white;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -325,19 +326,33 @@ div.break, div.cta, div.footer {
   overflow-y: scroll;
   position: fixed;
   top: 0;
-  transform: scale(0.9) translateY(30vh);
-  transition: all 0.65s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: scale(0.9) translateY(30vh) skew(6deg);
+  transition: all 0.65s cubic-bezier(0.19, 1, 0.22, 1);
   width: 100%;
-  z-index: 400; }
+  z-index: 400;
+  width: 100vw;
+  overflow-x: hidden; }
   #project-overlay-wrapper.active {
     opacity: 1;
-    transform: scale(1) translateY(0); }
+    transform: scale(1) translateY(0) skew(0deg); }
   #project-overlay-wrapper .project-overlay-container {
-    padding: 3rem 6rem; }
+    width: 500vw;
+    padding: 3rem 6rem;
+    display: block;
+    overflow: hidden; }
     #project-overlay-wrapper .project-overlay-container .project-details {
-      display: none; }
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.65s cubic-bezier(0.19, 1, 0.22, 1);
+      transform: translateX(0); }
       #project-overlay-wrapper .project-overlay-container .project-details.active {
         display: block; }
+      #project-overlay-wrapper .project-overlay-container .project-details.out-left {
+        transform: translateX(-100vw); }
+      #project-overlay-wrapper .project-overlay-container .project-details.out-right {
+        transform: translateX(50vw); }
   #project-overlay-wrapper .labels {
     display: flex;
     align-items: center;

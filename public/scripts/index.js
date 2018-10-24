@@ -25,8 +25,28 @@ var handleClick = function(active) {
 var nextProject = function() {
 
   if(activeProject < projects.length - 1){
-    activeProject += 1;
-    setActiveProject(activeProject);
+
+
+
+      $('.project-details.' + projects[activeProject]).addClass('out-left');
+
+
+      setTimeout(function(){
+        // $('.project-details.' + projects[activeProject]).removeClass('active');
+        activeProject += 1;
+        $('.project-details.' + projects[activeProject]).removeClass('out-right');
+
+
+        setTimeout(function(){
+
+          setActiveProject(activeProject);
+
+        },651);
+
+      },651);
+
+
+    // setActiveProject(activeProject);
   }
 
 };
@@ -46,8 +66,14 @@ var setActiveProject = function(index) {
 
   activeProject = index;
 
+  $('.project-details.' +projects[activeProject + 1]).addClass('out-right');
+  console.log('set');
+  // $('.project-details.' +projects[activeProject - 1]).addClass('out-left');
+
   $('.project-details').removeClass('active');
   $('.project-details.' + projects[index]).addClass('active');
+
+
 
   $('.overlay-prev').show();
   $('.overlay-next').show();
