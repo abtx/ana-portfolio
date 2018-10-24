@@ -164,6 +164,8 @@ ul {
     background-color: #FFCD14; }
   .label.yellow {
     background-color: #2BE7CB; }
+  .label.tangerine {
+    background-color: #FE7A7A; }
 
 .cta-container {
   display: flex;
@@ -319,14 +321,16 @@ div.break, div.cta, div.footer {
       #project-overlay-wrapper .project-overlay-container .project-details.active {
         display: block; }
   #project-overlay-wrapper .labels {
-    margin-bottom: 1rem;
     display: flex;
-    align-items: center; }
-    #project-overlay-wrapper .labels .label {
+    align-items: center;
+    margin-bottom: 1rem; }
+    #project-overlay-wrapper .labels .label-wrapper {
       flex-basis: 8rem;
-      margin-right: 3rem; }
+      margin-right: 3rem;
+      flex: 1; }
     #project-overlay-wrapper .labels .description {
-      flex: 6; }
+      flex: 8;
+      white-space: nowrap; }
   #project-overlay-wrapper .showcase-body section {
     display: flex;
     margin: 3rem 0;
@@ -368,6 +372,10 @@ div.break, div.cta, div.footer {
         left: -1rem;
         background: url("../ui/button-scroll.svg") no-repeat center;
         background-size: 2rem; }
+    #project-overlay-wrapper .showcase-body section p {
+      margin-bottom: 2rem; }
+      #project-overlay-wrapper .showcase-body section p:last-of-type {
+        margin-bottom: 0; }
     #project-overlay-wrapper .showcase-body section ul.w-icons li:before {
       content: '';
       position: absolute;

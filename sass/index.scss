@@ -166,18 +166,24 @@ div.break, div.cta, div.footer {
   }
 
   // labels
-  .labels {
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    .label {
-      flex-basis: 8rem;
-      margin-right: 3rem;
+
+    .labels {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      .label-wrapper {
+        flex-basis: 8rem;
+        margin-right: 3rem;
+        flex: 1;
+        .label {
+
+        }
+      }
+      .description {
+        flex: 8;
+        white-space: nowrap;
+      }
     }
-    .description {
-      flex: 6;
-    }
-  }
 
   .showcase-body {
     section {
@@ -226,6 +232,13 @@ div.break, div.cta, div.footer {
           left: -1rem;
           background: url('../ui/button-scroll.svg') no-repeat center;
           background-size: 2rem;
+        }
+      }
+
+      p {
+        margin-bottom: 2rem;
+        &:last-of-type {
+          margin-bottom: 0;
         }
       }
 

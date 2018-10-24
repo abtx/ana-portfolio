@@ -144,6 +144,8 @@ ul {
     background-color: #FFCD14; }
   .label.yellow {
     background-color: #2BE7CB; }
+  .label.tangerine {
+    background-color: #FE7A7A; }
 
 .cta-container {
   display: flex;
