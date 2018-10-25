@@ -21,6 +21,12 @@ section#about {
   }
 }
 
+section#noteworthy, section#techniques {
+  > div:first-of-type {
+    margin-right: 3rem;
+  }
+}
+
 #container section {
   align-items: flex-start;
   display: flex;
@@ -30,7 +36,7 @@ section#about {
     margin-top: 5rem;
   }
   &.odd-left {
-    padding: 0 0 0 6rem;
+    padding: 0 6rem 0 6rem;
     position: relative;
     &:after {
       content: '';

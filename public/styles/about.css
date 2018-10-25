@@ -284,6 +284,9 @@ section#about {
   section#about > div:first-of-type {
     flex: 1; }
 
+section#noteworthy > div:first-of-type, section#techniques > div:first-of-type {
+  margin-right: 3rem; }
+
 #container section {
   align-items: flex-start;
   display: flex;
@@ -291,7 +294,7 @@ section#about {
   #container section:first-of-type {
     margin-top: 5rem; }
   #container section.odd-left {
-    padding: 0 0 0 6rem;
+    padding: 0 6rem 0 6rem;
     position: relative; }
     #container section.odd-left:after {
       content: '';
