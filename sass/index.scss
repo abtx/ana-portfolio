@@ -287,9 +287,16 @@ div.break, div.cta, div.footer {
           background-size: 2rem;
         }
       }
-
       .w-50 {
-        height: 60vh;
+        height: 50vh;
+      }
+      .w-50.desc {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        ul {
+        }
       }
 
       .hero {

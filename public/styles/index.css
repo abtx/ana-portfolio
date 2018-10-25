@@ -47,10 +47,15 @@ html, body {
   height: 100%; }
 
 #container {
-  padding-top: 6rem;
-  scroll-snap-type: y mandatory;
+  height: 100vh;
   overflow-y: scroll;
-  height: 100vh; }
+  opacity: .1;
+  padding-top: 6rem;
+  transform: scale(1.05) translateY(3rem);
+  transition: all .45s ease-out; }
+  #container.active {
+    opacity: 1;
+    transform: scale(1) translateY(0); }
 
 nav {
   align-items: center;
@@ -64,6 +69,7 @@ nav {
   top: 0;
   width: 100%;
   padding: 4rem 6rem;
+  transition: all .45s ease-out;
   z-index: 100; }
   nav .btn {
     background-color: #3358ED;
@@ -72,7 +78,7 @@ nav {
     cursor: hand;
     cursor: pointer;
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: .04rem;
     padding: 1rem 2rem;
     position: relative;
@@ -95,19 +101,19 @@ nav {
       nav .btn:hover.inactive {
         box-shadow: -12px 10px 15px 0 rgba(0, 0, 0, 0.1); }
   nav .nav-item {
-    font-size: 22px;
+    font-size: 18px;
     padding: 1rem 2rem; }
 
 * {
   box-sizing: inherit; }
 
 h1 {
-  font-size: 36px;
+  font-size: 26px;
   font-weight: bold;
   margin: 3rem 0 1rem 0; }
 
 h2 {
-  font-size: 36px;
+  font-size: 26px;
   font-weight: normal;
   margin: 3rem 0 3rem 0; }
 
@@ -127,11 +133,11 @@ h2 {
     width: 12rem; }
 
 p {
-  font-size: 18px;
+  font-size: 16px;
   margin: .2rem 0 0 0;
   line-height: 2.5rem; }
   p.xs {
-    font-size: 14px;
+    font-size: 13px;
     line-height: normal; }
 
 a {
@@ -162,7 +168,7 @@ ul {
       font-weight: bold; }
 
 .label {
-  font-size: 16px;
+  font-size: 13px;
   padding: .3rem 1.3rem;
   display: inline-block;
   color: white;
@@ -177,8 +183,9 @@ ul {
 
 .cta-container {
   display: flex;
-  justify-content: center;
-  margin-top: 5rem; }
+  justify-content: flex-start;
+  margin-top: 1rem;
+  margin-left: -.4rem; }
   .cta-container .btn {
     background-color: #3358ED;
     border-radius: 40px;
@@ -186,7 +193,7 @@ ul {
     cursor: hand;
     cursor: pointer;
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: .04rem;
     padding: 1rem 2rem;
     position: relative;
@@ -421,7 +428,12 @@ div.break, div.cta, div.footer {
       background: url("../icons/user.svg") no-repeat center;
       background-size: 2rem; }
     #project-overlay-wrapper .showcase-body section .w-50 {
-      height: 60vh; }
+      height: 50vh; }
+    #project-overlay-wrapper .showcase-body section .w-50.desc {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; }
     #project-overlay-wrapper .showcase-body section .hero {
       overflow: hidden; }
       #project-overlay-wrapper .showcase-body section .hero .bg-img {

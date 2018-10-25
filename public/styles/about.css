@@ -1,6 +1,10 @@
 /*
 Copyright Artur Janas
 SASS: sass --watch sass/about.scss:public/styles/about.css
+
+sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/styles/core.css sass/about.scss:public/styles/about.css
+
+
 */
 
 /*# sourceMappingURL=about.css.map */

@@ -8,6 +8,8 @@ $(document).keyup(function(e) {
 $(document).ready(function(){
   // showDetails();
   // setActiveProject(4);
+  $('#container').addClass('active');
+
 });
 
 var projects = ['bank', 'mimo', 'nhs', 'social', 'storytelling'];
@@ -21,6 +23,10 @@ var handleClick = function(active) {
 
 
 // nav
+
+var goToAbout = function() {
+  location.href='about.html';
+};
 
 var nextProject = function() {
 
