@@ -15,13 +15,12 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
   align-items: flex-start;
   display: flex;
   // margin: 3rem 0;
-  padding: 3rem 0;
-  &.padded {
-    padding: 3rem 6rem;
+  padding: 1rem 6rem;
+  &:first-of-type {
+    margin-top: 5rem;
   }
-
   &.odd-left {
-    padding-left: 6rem;
+    padding: 0 0 0 6rem;
     position: relative;
     &:after {
       content: '';
@@ -50,4 +49,31 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
     //     }
     //   }
     // }
+
+    .skills-scale-wrapper {
+      &:first-of-type {
+        margin-right: 3rem;
+      }
+      > div {
+       align-items: center;
+       display: flex;
+       font-size: 24px;
+       justify-content: space-between;
+       padding: 1rem 0;
+       width: 80%;
+       i {
+         background-color: white;
+         border: 1px solid $label-teal;
+         border-radius: 50%;
+         box-shadow: $background-box-shadow;
+         display: inline-block;
+         height: 1.2rem;
+         margin-left: 1.2rem;
+         width: 1.2rem;
+         &.filled {
+           background-color: $label-teal;
+         }
+       }
+     }
+    }
   }

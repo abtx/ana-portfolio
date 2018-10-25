@@ -174,19 +174,31 @@ ul {
       color: #3C3C3C;
       font-weight: bold; }
 
-.label {
-  font-size: 13px;
-  padding: .3rem 1.3rem;
-  display: inline-block;
-  color: white;
-  border-radius: 2rem;
-  text-align: center; }
-  .label.teal {
-    background-color: #FFCD14; }
-  .label.yellow {
-    background-color: #2BE7CB; }
-  .label.tangerine {
-    background-color: #FE7A7A; }
+.labels {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem; }
+  .labels .label-wrapper {
+    flex-basis: 8rem;
+    margin-right: 3rem;
+    flex: 1; }
+    .labels .label-wrapper .label {
+      font-size: 18px;
+      padding: .3rem 1.3rem;
+      display: inline-block;
+      color: white;
+      border-radius: 2rem;
+      text-align: center; }
+      .labels .label-wrapper .label.teal {
+        background-color: #2BE7CB; }
+      .labels .label-wrapper .label.yellow {
+        background-color: #FFCD14; }
+      .labels .label-wrapper .label.tangerine {
+        background-color: #FE7A7A; }
+  .labels .description {
+    flex: 8;
+    font-size: 18px;
+    white-space: nowrap; }
 
 .cta-container {
   display: flex;
@@ -247,6 +259,12 @@ div.break, div.cta, div.footer {
 
 .mb-2 {
   margin-bottom: 2rem; }
+
+.mt-1 {
+  margin-top: 1rem; }
+
+.mt-5 {
+  margin-top: 5rem; }
 
 /* --------------------------- SECTIONS --------------------------- */
 #container section {
@@ -352,17 +370,6 @@ div.break, div.cta, div.footer {
       display: none; }
       #project-overlay-wrapper .project-overlay-container .project-details.active {
         display: block; }
-  #project-overlay-wrapper .labels {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem; }
-    #project-overlay-wrapper .labels .label-wrapper {
-      flex-basis: 8rem;
-      margin-right: 3rem;
-      flex: 1; }
-    #project-overlay-wrapper .labels .description {
-      flex: 8;
-      white-space: nowrap; }
   #project-overlay-wrapper .showcase-body section {
     display: flex;
     margin: 3rem 0;

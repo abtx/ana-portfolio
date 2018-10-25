@@ -19,8 +19,8 @@ $text-secondary: #555252;
 $text-invert: white;
 
 // labels
-$label-teal: #FFCD14;
-$label-yellow: #2BE7CB;
+$label-teal: #2BE7CB;
+$label-yellow: #FFCD14;
 $label-tangerine: #FE7A7A;
 
 // gradinets
@@ -157,21 +157,37 @@ ul {
     }
   }
 }
-.label {
-  font-size: 13px;
-  padding: .3rem 1.3rem;
-  display: inline-block;
-  color: white;
-  border-radius: 2rem;
-  text-align: center;
-  &.teal {
-    background-color: $label-teal;
+
+.labels {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  .label-wrapper {
+    flex-basis: 8rem;
+    margin-right: 3rem;
+    flex: 1;
+    .label {
+      font-size: 18px;
+      padding: .3rem 1.3rem;
+      display: inline-block;
+      color: white;
+      border-radius: 2rem;
+      text-align: center;
+      &.teal {
+        background-color: $label-teal;
+      }
+      &.yellow {
+        background-color: $label-yellow;
+      }
+      &.tangerine {
+        background-color: $label-tangerine;
+      }
+    }
   }
-  &.yellow {
-    background-color: $label-yellow;
-  }
-  &.tangerine {
-    background-color: $label-tangerine;
+  .description {
+    flex: 8;
+    font-size: 18px;
+    white-space: nowrap;
   }
 }
 
@@ -236,6 +252,12 @@ div.break, div.cta, div.footer {
 
 .mb-2 {
   margin-bottom: 2rem;
+}
+.mt-1{
+   margin-top: 1rem;
+}
+.mt-5 {
+   margin-top: 5rem;
 }
 
 
