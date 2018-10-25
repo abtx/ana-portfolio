@@ -79,26 +79,7 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
   }
 }
 
-div.break, div.cta, div.footer {
-  display: flex;
-  height: auto;
-  justify-content: center;
-  padding-left: 6rem;
-  width: 100%;
-  &.break {
-    justify-content: flex-start;
-  }
-  &.cta > .cta-container {
-    align-items: center;
-    padding: 2rem 0;
-    .or {
-      padding: 0 1rem;
-    }
-  }
-  &.footer {
-    padding: 2rem 0;
-  }
-}
+
 
 /* 3 --------------------------- PROJECT DETAILS --------------------------- */
 
@@ -296,6 +277,7 @@ div.break, div.cta, div.footer {
         flex-direction: column;
         justify-content: flex-start;
         ul {
+
         }
       }
 
@@ -333,7 +315,6 @@ div.break, div.cta, div.footer {
         }
 
       }
-
     }
   }
 }

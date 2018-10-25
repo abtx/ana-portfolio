@@ -117,6 +117,13 @@ h2 {
   font-weight: normal;
   margin: 3rem 0 3rem 0; }
 
+h3 {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 2rem 0; }
+  h3:first-of-type {
+    margin-top: 0; }
+
 .h1-underline {
   display: block;
   position: relative;
@@ -204,6 +211,22 @@ ul {
       background: #1d3cda;
       box-shadow: -12px 10px 15px 0 rgba(0, 0, 0, 0.1); }
 
+div.break, div.cta, div.footer {
+  display: flex;
+  height: auto;
+  justify-content: center;
+  padding-left: 6rem;
+  width: 100%; }
+  div.break.break, div.cta.break, div.footer.break {
+    justify-content: flex-start; }
+  div.break.cta > .cta-container, div.cta.cta > .cta-container, div.footer.cta > .cta-container {
+    align-items: center;
+    padding: 2rem 0; }
+    div.break.cta > .cta-container .or, div.cta.cta > .cta-container .or, div.footer.cta > .cta-container .or {
+      padding: 0 1rem; }
+  div.break.footer, div.cta.footer, div.footer.footer {
+    padding: 2rem 0; }
+
 .w-50 {
   width: 50%; }
 
@@ -272,22 +295,6 @@ ul {
       #container section .w-50.hero .storytelling {
         background: url("../hero/storytelling.png") no-repeat center center;
         background-size: cover; }
-
-div.break, div.cta, div.footer {
-  display: flex;
-  height: auto;
-  justify-content: center;
-  padding-left: 6rem;
-  width: 100%; }
-  div.break.break, div.cta.break, div.footer.break {
-    justify-content: flex-start; }
-  div.break.cta > .cta-container, div.cta.cta > .cta-container, div.footer.cta > .cta-container {
-    align-items: center;
-    padding: 2rem 0; }
-    div.break.cta > .cta-container .or, div.cta.cta > .cta-container .or, div.footer.cta > .cta-container .or {
-      padding: 0 1rem; }
-  div.break.footer, div.cta.footer, div.footer.footer {
-    padding: 2rem 0; }
 
 /* 3 --------------------------- PROJECT DETAILS --------------------------- */
 #project-overlay-nav {

@@ -4,5 +4,50 @@ SASS: sass --watch sass/about.scss:public/styles/about.css
 
 sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/styles/core.css sass/about.scss:public/styles/about.css
 
-
 */
+
+@import "mixins.scss";
+@import "core.scss";
+
+
+
+#container section {
+  align-items: flex-start;
+  display: flex;
+  // margin: 3rem 0;
+  padding: 3rem 0;
+  &.padded {
+    padding: 3rem 6rem;
+  }
+
+  &.odd-left {
+    padding-left: 6rem;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      width: calc(103vw);
+      height: 100%;
+      top: 1.5rem;
+      border-top-right-radius: 6rem;
+      border-bottom-right-radius: 6rem;
+      background-color: $background-box;
+      box-shadow: $background-box-shadow;
+      z-index: -1;
+      left: -6rem;
+      }
+    }
+    // .hero {
+    //   overflow: hidden;
+    //   // margin-top: 3rem;
+    //   .bg-img {
+    //     display: block;
+    //     height: 100%;
+    //     width: 100%;
+    //     &.hierarchy {
+    //       background: url('../bank/hierarchy.png') no-repeat center center;
+    //       background-size: contain;
+    //     }
+    //   }
+    // }
+  }
