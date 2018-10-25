@@ -115,8 +115,11 @@ h3 {
 }
 p {
   font-size: 16px;
-  margin: .2rem 0 0 0;
-  line-height: 2.5rem;
+  margin: 1rem 0 0 0;
+  line-height: 2rem;
+  &.large {
+    font-size: 22px;
+  }
   &.xs {
     font-size: 13px;
     line-height: normal;
@@ -196,9 +199,10 @@ ul {
   justify-content: flex-start;
   margin-top: 1rem;
   margin-left: -.4rem;
-  .btn {
-    @include button;
-  }
+}
+
+.btn {
+  @include button;
 }
 
 
@@ -250,11 +254,18 @@ div.break, div.cta, div.footer {
   align-items: center;
 }
 
+
 .mb-2 {
   margin-bottom: 2rem;
 }
 .mt-1{
    margin-top: 1rem;
+}
+.mt-2 {
+   margin-top: 2rem;
+}
+.mt-3 {
+   margin-top: 3rem;
 }
 .mt-5 {
    margin-top: 5rem;

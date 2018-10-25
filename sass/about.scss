@@ -10,6 +10,16 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
 @import "core.scss";
 
 
+section#about {
+  align-items: center;
+  display: flex;
+  > div {
+    flex: 2;
+  }
+  > div:first-of-type {
+    flex: 1;
+  }
+}
 
 #container section {
   align-items: flex-start;

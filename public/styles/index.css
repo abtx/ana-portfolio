@@ -141,8 +141,10 @@ h3 {
 
 p {
   font-size: 16px;
-  margin: .2rem 0 0 0;
-  line-height: 2.5rem; }
+  margin: 1rem 0 0 0;
+  line-height: 2rem; }
+  p.large {
+    font-size: 22px; }
   p.xs {
     font-size: 13px;
     line-height: normal; }
@@ -205,23 +207,24 @@ ul {
   justify-content: flex-start;
   margin-top: 1rem;
   margin-left: -.4rem; }
-  .cta-container .btn {
-    background-color: #3358ED;
-    border-radius: 40px;
-    color: white;
-    cursor: hand;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 16px;
-    letter-spacing: .04rem;
-    padding: 1rem 2rem;
-    position: relative;
-    text-decoration: none;
-    transition: all .25s ease-in-out;
-    white-space: nowrap; }
-    .cta-container .btn:hover {
-      background: #1d3cda;
-      box-shadow: -12px 10px 15px 0 rgba(0, 0, 0, 0.1); }
+
+.btn {
+  background-color: #3358ED;
+  border-radius: 40px;
+  color: white;
+  cursor: hand;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  letter-spacing: .04rem;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: none;
+  transition: all .25s ease-in-out;
+  white-space: nowrap; }
+  .btn:hover {
+    background: #1d3cda;
+    box-shadow: -12px 10px 15px 0 rgba(0, 0, 0, 0.1); }
 
 div.break, div.cta, div.footer {
   display: flex;
@@ -262,6 +265,12 @@ div.break, div.cta, div.footer {
 
 .mt-1 {
   margin-top: 1rem; }
+
+.mt-2 {
+  margin-top: 2rem; }
+
+.mt-3 {
+  margin-top: 3rem; }
 
 .mt-5 {
   margin-top: 5rem; }
