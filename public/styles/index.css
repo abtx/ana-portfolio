@@ -386,6 +386,15 @@ div.footer {
       #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50 {
         height: 50vh;
         padding-right: 6rem; }
+        #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero {
+          padding: 3rem; }
+          #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero .bg-img {
+            transform: scale(1);
+            transition: all 0.65s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            height: 100%; }
+            #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero .bg-img:hover {
+              overflow: show;
+              transform: scale(1.5); }
   #project-overlay-wrapper .showcase-body {
     padding-top: 3rem;
     position: relative; }
@@ -453,29 +462,19 @@ div.footer {
         flex-direction: column;
         justify-content: flex-start; }
       #project-overlay-wrapper .showcase-body section .hero {
-        overflow: hidden;
-        overflow: hidden;
-        position: relative;
-        transform: scale(1);
-        transition: all 0.65s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+        overflow: show;
+        position: relative; }
         #project-overlay-wrapper .showcase-body section .hero .caption {
           display: block;
           text-align: center;
           font-size: 13px; }
-        #project-overlay-wrapper .showcase-body section .hero.zoom {
-          padding: 3rem; }
-          #project-overlay-wrapper .showcase-body section .hero.zoom:hover {
-            overflow: show;
-            transform: scale(1.5); }
         #project-overlay-wrapper .showcase-body section .hero .bg-img {
           display: block;
-          height: 100%; }
-          #project-overlay-wrapper .showcase-body section .hero .bg-img.secondary {
-            border-radius: 1rem;
-            height: 60vh;
-            width: 100%; }
-            #project-overlay-wrapper .showcase-body section .hero .bg-img.secondary.half {
-              height: 20vh; }
+          border-radius: 1rem;
+          height: 60vh;
+          width: 100%; }
+          #project-overlay-wrapper .showcase-body section .hero .bg-img.half {
+            height: 50%; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.hierarchy {
             background: url("../bank/hierarchy.png") no-repeat center center;
             background-size: contain; }

@@ -157,6 +157,18 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
         .w-50 {
           height: 50vh;
           padding-right: 6rem;
+          &.hero {
+            padding: 3rem;
+            .bg-img {
+              transform: scale(1);
+              transition: all .65s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+              height: 100%;
+              &:hover {
+                overflow: show;
+                transform: scale(1.5);
+              }
+            }
+          }
         }
       }
     }
@@ -251,41 +263,25 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        ul {
-
-        }
       }
 
       .hero {
-        overflow: hidden;
-        overflow: hidden;
+        overflow: show;
         position: relative;
-        transform: scale(1);
-        transition: all .65s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         .caption {
           display: block;
           text-align: center;
           font-size: 13px;
         }
-        &.zoom {
-          padding: 3rem;
-          &:hover {
-            overflow: show;
-            transform: scale(1.5);
-          }
-        }
-
         .bg-img {
           display: block;
-          height: 100%;
-          &.secondary {
-            border-radius: 1rem;
-            height: 60vh;
-            width: 100%;
-            &.half {
-              height: 20vh
-            }
+          border-radius: 1rem;
+          height: 60vh;
+          width: 100%;
+          &.half {
+            height: 50%;
           }
+
           &.hierarchy {
             background: url('../bank/hierarchy.png') no-repeat center center;
             background-size: contain;
