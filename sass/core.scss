@@ -206,25 +206,11 @@ ul {
 }
 
 
-div.break, div.cta, div.footer {
+div.footer {
   display: flex;
-  height: auto;
   justify-content: center;
-  padding-left: 6rem;
+  padding: 3rem 0 2rem 0;
   width: 100%;
-  &.break {
-    justify-content: flex-start;
-  }
-  &.cta > .cta-container {
-    align-items: center;
-    padding: 2rem 0;
-    .or {
-      padding: 0 1rem;
-    }
-  }
-  &.footer {
-    padding: 2rem 0;
-  }
 }
 
 
