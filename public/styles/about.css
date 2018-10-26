@@ -141,7 +141,7 @@ h3 {
     width: 12rem; }
 
 p {
-  font-size: 16px;
+  font-size: 18px;
   margin: 1rem 0 0 0;
   line-height: 2rem; }
   p.large {
@@ -154,11 +154,11 @@ a {
   color: #4568E7;
   cursor: pointer;
   cursor: hand;
-  font-size: 16px;
+  font-size: 18px;
   text-decoration: none; }
 
 ul {
-  font-size: 16px;
+  font-size: 18px;
   list-style: none;
   margin: .4rem 0 2rem 0;
   padding: 0; }
