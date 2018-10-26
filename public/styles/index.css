@@ -115,7 +115,7 @@ h1 {
 h2 {
   font-size: 26px;
   font-weight: normal;
-  margin: 3rem 0 3rem 0; }
+  margin: 3rem 0 2rem 0; }
 
 h3 {
   font-size: 20px;
@@ -257,11 +257,17 @@ div.break, div.cta, div.footer {
 .justify-content-between {
   justify-content: space-between; }
 
+.justify-content-center {
+  justify-content: center; }
+
 .align-items-center {
   align-items: center; }
 
 .mb-2 {
   margin-bottom: 2rem; }
+
+.mt-0 {
+  margin-top: 0rem; }
 
 .mt-1 {
   margin-top: 1rem; }
@@ -362,7 +368,7 @@ div.break, div.cta, div.footer {
     bottom: 2rem; }
 
 #project-overlay-wrapper {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: white;
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -381,57 +387,46 @@ div.break, div.cta, div.footer {
     opacity: 1;
     transform: scale(1) translateY(0); }
   #project-overlay-wrapper .project-overlay-container {
-    margin: 0 auto;
-    width: 80%;
+    width: 100%;
     padding: 3rem 6rem; }
     #project-overlay-wrapper .project-overlay-container .project-details {
       display: none; }
       #project-overlay-wrapper .project-overlay-container .project-details.active {
         display: block; }
+      #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50 {
+        height: 50vh;
+        padding-right: 6rem; }
   #project-overlay-wrapper .showcase-body {
+    padding-top: 3rem;
     position: relative; }
     #project-overlay-wrapper .showcase-body section {
       display: flex;
-      margin: 2rem 0;
-      padding: 2rem 0;
+      padding-bottom: 3rem;
       align-items: center; }
-      #project-overlay-wrapper .showcase-body section:first-of-type {
-        margin-top: 5rem; }
+      #project-overlay-wrapper .showcase-body section.odd-left:after, #project-overlay-wrapper .showcase-body section.odd-right:after {
+        content: '';
+        position: absolute;
+        height: 90%;
+        top: 0%;
+        z-index: -1; }
       #project-overlay-wrapper .showcase-body section.odd-left {
         position: relative; }
         #project-overlay-wrapper .showcase-body section.odd-left:after {
-          content: '';
-          position: absolute;
-          width: 100vw;
-          height: 100%;
           border-top-left-radius: 6rem;
           border-bottom-left-radius: 6rem;
-          background-color: white;
+          background-color: #F9FCFF;
           box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
-          z-index: -1;
-          left: 5%; }
+          left: 0;
+          right: -6rem; }
       #project-overlay-wrapper .showcase-body section.odd-right {
         position: relative; }
         #project-overlay-wrapper .showcase-body section.odd-right:after {
-          content: '';
-          position: absolute;
-          width: 100vw;
-          height: 100%;
-          top: 1.5rem;
           border-top-right-radius: 6rem;
           border-bottom-right-radius: 6rem;
-          background-color: white;
+          background-color: #F9FCFF;
           box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
-          z-index: -1;
-          right: -5%; }
-        #project-overlay-wrapper .showcase-body section.odd-right.w-button {
-          position: absolute;
-          display: block;
-          width: 1rem;
-          height: 1rem;
-          left: -1rem;
-          background: url("../ui/button-scroll.svg") no-repeat center;
-          background-size: 2rem; }
+          left: -6rem;
+          right: 0; }
       #project-overlay-wrapper .showcase-body section p {
         margin-bottom: 2rem; }
         #project-overlay-wrapper .showcase-body section p:last-of-type {
@@ -462,8 +457,6 @@ div.break, div.cta, div.footer {
       #project-overlay-wrapper .showcase-body section ul.w-icons li.user:before {
         background: url("../icons/user.svg") no-repeat center;
         background-size: 2rem; }
-      #project-overlay-wrapper .showcase-body section .w-50 {
-        height: 50vh; }
       #project-overlay-wrapper .showcase-body section .w-50.desc {
         align-items: center;
         display: flex;
@@ -471,8 +464,6 @@ div.break, div.cta, div.footer {
         justify-content: flex-start; }
       #project-overlay-wrapper .showcase-body section .hero {
         overflow: hidden;
-        display: block;
-        padding: 3rem;
         overflow: hidden;
         position: relative;
         transform: scale(1);
@@ -481,12 +472,20 @@ div.break, div.cta, div.footer {
           display: block;
           text-align: center;
           font-size: 13px; }
-        #project-overlay-wrapper .showcase-body section .hero:hover {
-          overflow: show;
-          transform: scale(1.4); }
+        #project-overlay-wrapper .showcase-body section .hero.zoom {
+          padding: 3rem; }
+          #project-overlay-wrapper .showcase-body section .hero.zoom:hover {
+            overflow: show;
+            transform: scale(1.5); }
         #project-overlay-wrapper .showcase-body section .hero .bg-img {
           display: block;
           height: 100%; }
+          #project-overlay-wrapper .showcase-body section .hero .bg-img.secondary {
+            border-radius: 1rem;
+            height: 60vh;
+            width: 100%; }
+            #project-overlay-wrapper .showcase-body section .hero .bg-img.secondary.half {
+              height: 20vh; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.hierarchy {
             background: url("../bank/hierarchy.png") no-repeat center center;
             background-size: contain; }
@@ -507,17 +506,16 @@ div.break, div.cta, div.footer {
             background-size: contain; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.social {
             background: url("../overlay/social.png") no-repeat center center;
-            background-size: cover;
-            border-radius: 1rem; }
+            background-size: cover; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.nhs-1 {
             background: url("../overlay/nhs-1.png") no-repeat center center;
-            background-size: cover; }
+            background-size: contain; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.nhs-2 {
             background: url("../overlay/nhs-2.png") no-repeat center center;
-            background-size: cover; }
+            background-size: contain; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.nhs-3 {
             background: url("../overlay/nhs-3.png") no-repeat center center;
-            background-size: cover; }
+            background-size: contain; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.storytelling {
             background: url("../overlay/storytelling.svg") no-repeat center center;
             background-size: cover; }

@@ -69,7 +69,7 @@ var closeOveraly = function() {
 };
 
 var showDetails = function() {
-  $('#container').addClass('blur');
+  // $('#container').addClass('blur');
   $('#project-overlay-wrapper').css({'display':'flex'});
   $('#project-overlay-nav').css({'display':'inline'});
   setTimeout(function(){
@@ -81,7 +81,7 @@ var showDetails = function() {
 var hideDetails = function() {
   $('#project-overlay-wrapper').removeClass('active');
   $('#project-overlay-nav').removeClass('active');
-  $('#container').removeClass('blur');
+  // $('#container').removeClass('blur');
   setTimeout(function(){
     $('#project-overlay-wrapper').css({'display':'none'});
     $('#project-overlay-nav').css({'display':'none'});

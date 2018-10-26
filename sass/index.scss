@@ -124,7 +124,7 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
 }
 
 #project-overlay-wrapper {
-  background-color: rgba(255,255,255,.85);
+  background-color: rgba(255,255,255,1);
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -145,68 +145,59 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
   }
 
   .project-overlay-container {
-    margin: 0 auto;
-    width: 80%;
+    // margin: 0 auto;
+    width: 100%;
     padding: 3rem 6rem;
     .project-details {
       display: none;
       &.active {
         display: block;
       }
+      &.bank {
+        .w-50 {
+          height: 50vh;
+          padding-right: 6rem;
+        }
+      }
     }
   }
 
   .showcase-body {
+    padding-top: 3rem;
     position: relative;
     section {
       display: flex;
-      margin: 2rem 0;
-      padding: 2rem 0;
+      padding-bottom: 3rem;;
       align-items: center;
-
-      &:first-of-type {
-        margin-top: 5rem;
-      }
-
-      &.odd-left {
-        position: relative;
+      &.odd-left, &.odd-right {
         &:after {
           content: '';
           position: absolute;
-          width: 100vw;
-          height: 100%;
+          height: 90%;
+          top: 0%;
+          z-index: -1;
+        }
+      }
+      &.odd-left {
+        position: relative;
+        &:after {
           border-top-left-radius: 6rem;
           border-bottom-left-radius: 6rem;
-          background-color: white;
+          background-color: $background-box;
           box-shadow: $background-box-shadow;
-          z-index: -1;
-          left: 5%;
+          left: 0;
+          right: -6rem;;
         }
       }
       &.odd-right {
         position: relative;
         &:after {
-          content: '';
-          position: absolute;
-          width: 100vw;
-          height: 100%;
-          top: 1.5rem;
           border-top-right-radius: 6rem;
           border-bottom-right-radius: 6rem;
-          background-color: white;
+          background-color: $background-box;
           box-shadow: $background-box-shadow;
-          z-index: -1;
-          right: -5%;
-        }
-
-        &.w-button {
-          position: absolute;
-          display: block;
-          width: 1rem;
-          height: 1rem;
-          left: -1rem;
-          background: url('../ui/button-scroll.svg') no-repeat center;
-          background-size: 2rem;
+          left: -6rem;
+          right: 0;
         }
       }
 
@@ -254,9 +245,7 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
           background-size: 2rem;
         }
       }
-      .w-50 {
-        height: 50vh;
-      }
+
       .w-50.desc {
         align-items: center;
         display: flex;
@@ -269,8 +258,6 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
 
       .hero {
         overflow: hidden;
-        display: block;
-        padding: 3rem;
         overflow: hidden;
         position: relative;
         transform: scale(1);
@@ -280,14 +267,25 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
           text-align: center;
           font-size: 13px;
         }
-        &:hover {
-          overflow: show;
-          transform: scale(1.4);
+        &.zoom {
+          padding: 3rem;
+          &:hover {
+            overflow: show;
+            transform: scale(1.5);
+          }
         }
 
         .bg-img {
           display: block;
           height: 100%;
+          &.secondary {
+            border-radius: 1rem;
+            height: 60vh;
+            width: 100%;
+            &.half {
+              height: 20vh
+            }
+          }
           &.hierarchy {
             background: url('../bank/hierarchy.png') no-repeat center center;
             background-size: contain;
@@ -315,19 +313,18 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
           &.social {
             background: url('../overlay/social.png') no-repeat center center;
             background-size: cover;
-            border-radius: 1rem;
           }
           &.nhs-1 {
             background: url('../overlay/nhs-1.png') no-repeat center center;
-            background-size: cover;
+            background-size: contain;
           }
           &.nhs-2 {
             background: url('../overlay/nhs-2.png') no-repeat center center;
-            background-size: cover;
+            background-size: contain;
           }
           &.nhs-3 {
             background: url('../overlay/nhs-3.png') no-repeat center center;
-            background-size: cover;
+            background-size: contain;
           }
           &.storytelling {
             background: url('../overlay/storytelling.svg') no-repeat center center;
