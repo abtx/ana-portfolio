@@ -275,6 +275,12 @@ div.break, div.cta, div.footer {
 .mt-5 {
   margin-top: 5rem; }
 
+.blur {
+  filter: blur(14px); }
+
+.zoom {
+  cursor: zoom-in; }
+
 /* --------------------------- SECTIONS --------------------------- */
 #container section {
   align-items: center;
@@ -356,7 +362,7 @@ div.break, div.cta, div.footer {
     bottom: 2rem; }
 
 #project-overlay-wrapper {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.85);
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -364,6 +370,7 @@ div.break, div.cta, div.footer {
   height: 100vh;
   opacity: 0;
   overflow-y: scroll;
+  overflow-x: hidden;
   position: fixed;
   top: 0;
   transform: scale(0.9) translateY(30vh);
@@ -374,112 +381,145 @@ div.break, div.cta, div.footer {
     opacity: 1;
     transform: scale(1) translateY(0); }
   #project-overlay-wrapper .project-overlay-container {
+    margin: 0 auto;
+    width: 80%;
     padding: 3rem 6rem; }
     #project-overlay-wrapper .project-overlay-container .project-details {
       display: none; }
       #project-overlay-wrapper .project-overlay-container .project-details.active {
         display: block; }
-  #project-overlay-wrapper .showcase-body section {
-    display: flex;
-    margin: 3rem 0;
-    padding: 3rem 0;
-    align-items: center; }
-    #project-overlay-wrapper .showcase-body section.odd-left {
-      position: relative; }
-      #project-overlay-wrapper .showcase-body section.odd-left:after {
+  #project-overlay-wrapper .showcase-body {
+    position: relative; }
+    #project-overlay-wrapper .showcase-body section {
+      display: flex;
+      margin: 2rem 0;
+      padding: 2rem 0;
+      align-items: center; }
+      #project-overlay-wrapper .showcase-body section:first-of-type {
+        margin-top: 5rem; }
+      #project-overlay-wrapper .showcase-body section.odd-left {
+        position: relative; }
+        #project-overlay-wrapper .showcase-body section.odd-left:after {
+          content: '';
+          position: absolute;
+          width: 100vw;
+          height: 100%;
+          border-top-left-radius: 6rem;
+          border-bottom-left-radius: 6rem;
+          background-color: white;
+          box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
+          z-index: -1;
+          left: 5%; }
+      #project-overlay-wrapper .showcase-body section.odd-right {
+        position: relative; }
+        #project-overlay-wrapper .showcase-body section.odd-right:after {
+          content: '';
+          position: absolute;
+          width: 100vw;
+          height: 100%;
+          top: 1.5rem;
+          border-top-right-radius: 6rem;
+          border-bottom-right-radius: 6rem;
+          background-color: white;
+          box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
+          z-index: -1;
+          right: -5%; }
+        #project-overlay-wrapper .showcase-body section.odd-right.w-button {
+          position: absolute;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          left: -1rem;
+          background: url("../ui/button-scroll.svg") no-repeat center;
+          background-size: 2rem; }
+      #project-overlay-wrapper .showcase-body section p {
+        margin-bottom: 2rem; }
+        #project-overlay-wrapper .showcase-body section p:last-of-type {
+          margin-bottom: 0; }
+      #project-overlay-wrapper .showcase-body section ul.w-icons li:before {
         content: '';
-        position: absolute;
-        width: calc(100vw - 3rem);
-        height: 100%;
-        top: 1.5rem;
-        border-top-right-radius: 6rem;
-        border-bottom-right-radius: 6rem;
-        background-color: #F9FCFF;
-        box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
-        z-index: -1;
-        left: -6rem; }
-    #project-overlay-wrapper .showcase-body section.odd-right {
-      position: relative; }
-      #project-overlay-wrapper .showcase-body section.odd-right:after {
-        content: '';
-        position: absolute;
-        width: calc(100vw - 3rem);
-        height: 100%;
-        top: 1.5rem;
-        border-top-left-radius: 6rem;
-        border-bottom-left-radius: 6rem;
-        background-color: #F9FCFF;
-        box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
-        z-index: -1;
-        right: -6rem; }
-      #project-overlay-wrapper .showcase-body section.odd-right.w-button {
         position: absolute;
         display: block;
         width: 1rem;
         height: 1rem;
         left: -1rem;
-        background: url("../ui/button-scroll.svg") no-repeat center;
+        padding: .5rem 1.2rem 1rem; }
+      #project-overlay-wrapper .showcase-body section ul.w-icons li.tiles:before {
+        background: url("../icons/tiles.svg") no-repeat center;
         background-size: 2rem; }
-    #project-overlay-wrapper .showcase-body section p {
-      margin-bottom: 2rem; }
-      #project-overlay-wrapper .showcase-body section p:last-of-type {
-        margin-bottom: 0; }
-    #project-overlay-wrapper .showcase-body section ul.w-icons li:before {
-      content: '';
-      position: absolute;
-      display: block;
-      width: 1rem;
-      height: 1rem;
-      left: -1rem;
-      padding: .5rem 1.2rem 1rem; }
-    #project-overlay-wrapper .showcase-body section ul.w-icons li.tiles:before {
-      background: url("../icons/tiles.svg") no-repeat center;
-      background-size: 2rem; }
-    #project-overlay-wrapper .showcase-body section ul.w-icons li.view:before {
-      background: url("../icons/view.svg") no-repeat center;
-      background-size: 2rem; }
-    #project-overlay-wrapper .showcase-body section ul.w-icons li.chart:before {
-      background: url("../icons/chart.svg") no-repeat center;
-      background-size: 2rem; }
-    #project-overlay-wrapper .showcase-body section ul.w-icons li.heart:before {
-      background: url("../icons/heart.svg") no-repeat center;
-      background-size: 2rem; }
-    #project-overlay-wrapper .showcase-body section ul.w-icons li.target:before {
-      background: url("../icons/target.svg") no-repeat center;
-      background-size: 2rem; }
-    #project-overlay-wrapper .showcase-body section ul.w-icons li.user:before {
-      background: url("../icons/user.svg") no-repeat center;
-      background-size: 2rem; }
-    #project-overlay-wrapper .showcase-body section .w-50 {
-      height: 50vh; }
-    #project-overlay-wrapper .showcase-body section .w-50.desc {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start; }
-    #project-overlay-wrapper .showcase-body section .hero {
-      overflow: hidden; }
-      #project-overlay-wrapper .showcase-body section .hero .bg-img {
+      #project-overlay-wrapper .showcase-body section ul.w-icons li.view:before {
+        background: url("../icons/view.svg") no-repeat center;
+        background-size: 2rem; }
+      #project-overlay-wrapper .showcase-body section ul.w-icons li.chart:before {
+        background: url("../icons/chart.svg") no-repeat center;
+        background-size: 2rem; }
+      #project-overlay-wrapper .showcase-body section ul.w-icons li.heart:before {
+        background: url("../icons/heart.svg") no-repeat center;
+        background-size: 2rem; }
+      #project-overlay-wrapper .showcase-body section ul.w-icons li.target:before {
+        background: url("../icons/target.svg") no-repeat center;
+        background-size: 2rem; }
+      #project-overlay-wrapper .showcase-body section ul.w-icons li.user:before {
+        background: url("../icons/user.svg") no-repeat center;
+        background-size: 2rem; }
+      #project-overlay-wrapper .showcase-body section .w-50 {
+        height: 50vh; }
+      #project-overlay-wrapper .showcase-body section .w-50.desc {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; }
+      #project-overlay-wrapper .showcase-body section .hero {
+        overflow: hidden;
         display: block;
-        height: 100%;
-        width: 100%; }
-        #project-overlay-wrapper .showcase-body section .hero .bg-img.hierarchy {
-          background: url("../bank/hierarchy.png") no-repeat center center;
-          background-size: contain; }
-        #project-overlay-wrapper .showcase-body section .hero .bg-img.user-oriented {
-          background: url("../bank/user-oriented.png") no-repeat center center;
-          background-size: contain; }
-        #project-overlay-wrapper .showcase-body section .hero .bg-img.responsive {
-          background: url("../bank/responsive.png") no-repeat center center;
-          background-size: contain; }
-        #project-overlay-wrapper .showcase-body section .hero .bg-img.transparent {
-          background: url("../bank/transparent.png") no-repeat center center;
-          background-size: contain; }
-        #project-overlay-wrapper .showcase-body section .hero .bg-img.engaging {
-          background: url("../bank/engaging.png") no-repeat center center;
-          background-size: contain; }
-        #project-overlay-wrapper .showcase-body section .hero .bg-img.organised {
-          background: url("../bank/organised.png") no-repeat center center;
-          background-size: contain; }
+        padding: 3rem;
+        overflow: hidden;
+        position: relative;
+        transform: scale(1);
+        transition: all 0.65s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+        #project-overlay-wrapper .showcase-body section .hero .caption {
+          display: block;
+          text-align: center;
+          font-size: 13px; }
+        #project-overlay-wrapper .showcase-body section .hero:hover {
+          overflow: show;
+          transform: scale(1.4); }
+        #project-overlay-wrapper .showcase-body section .hero .bg-img {
+          display: block;
+          height: 100%; }
+          #project-overlay-wrapper .showcase-body section .hero .bg-img.hierarchy {
+            background: url("../bank/hierarchy.png") no-repeat center center;
+            background-size: contain; }
+          #project-overlay-wrapper .showcase-body section .hero .bg-img.user-oriented {
+            background: url("../bank/user-oriented.png") no-repeat center center;
+            background-size: contain; }
+          #project-overlay-wrapper .showcase-body section .hero .bg-img.responsive {
+            background: url("../bank/responsive.png") no-repeat center center;
+            background-size: contain; }
+          #project-overlay-wrapper .showcase-body section .hero .bg-img.transparent {
+            background: url("../bank/transparent.png") no-repeat center center;
+            background-size: contain; }
+          #project-overlay-wrapper .showcase-body section .hero .bg-img.engaging {
+            background: url("../bank/engaging.png") no-repeat center center;
+            background-size: contain; }
+          #project-overlay-wrapper .showcase-body section .hero .bg-img.organised {
+            background: url("../bank/organised.png") no-repeat center center;
+            background-size: contain; }
+          #project-overlay-wrapper .showcase-body section .hero .bg-img.social {
+            background: url("../overlay/social.png") no-repeat center center;
+            background-size: cover;
+            border-radius: 1rem; }
+          #project-overlay-wrapper .showcase-body section .hero .bg-img.nhs-1 {
+            background: url("../overlay/nhs-1.png") no-repeat center center;
+            background-size: cover; }
+          #project-overlay-wrapper .showcase-body section .hero .bg-img.nhs-2 {
+            background: url("../overlay/nhs-2.png") no-repeat center center;
+            background-size: cover; }
+          #project-overlay-wrapper .showcase-body section .hero .bg-img.nhs-3 {
+            background: url("../overlay/nhs-3.png") no-repeat center center;
+            background-size: cover; }
+          #project-overlay-wrapper .showcase-body section .hero .bg-img.storytelling {
+            background: url("../overlay/storytelling.svg") no-repeat center center;
+            background-size: cover; }
 
 /*# sourceMappingURL=index.css.map */

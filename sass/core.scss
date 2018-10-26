@@ -254,7 +254,6 @@ div.break, div.cta, div.footer {
   align-items: center;
 }
 
-
 .mb-2 {
   margin-bottom: 2rem;
 }
@@ -269,6 +268,15 @@ div.break, div.cta, div.footer {
 }
 .mt-5 {
    margin-top: 5rem;
+}
+
+
+.blur {
+  filter: blur(14px);
+}
+
+.zoom {
+  cursor: zoom-in;
 }
 
 

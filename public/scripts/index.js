@@ -6,10 +6,9 @@ $(document).keyup(function(e) {
 });
 
 $(document).ready(function(){
-  // showDetails();
-  // setActiveProject(4);
+  showDetails();
+  setActiveProject(0);
   $('#container').addClass('active');
-
 });
 
 var projects = ['bank', 'mimo', 'nhs', 'social', 'storytelling'];
@@ -70,6 +69,7 @@ var closeOveraly = function() {
 };
 
 var showDetails = function() {
+  $('#container').addClass('blur');
   $('#project-overlay-wrapper').css({'display':'flex'});
   $('#project-overlay-nav').css({'display':'inline'});
   setTimeout(function(){
@@ -81,6 +81,7 @@ var showDetails = function() {
 var hideDetails = function() {
   $('#project-overlay-wrapper').removeClass('active');
   $('#project-overlay-nav').removeClass('active');
+  $('#container').removeClass('blur');
   setTimeout(function(){
     $('#project-overlay-wrapper').css({'display':'none'});
     $('#project-overlay-nav').css({'display':'none'});
