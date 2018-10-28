@@ -465,6 +465,54 @@ div.footer {
   cursor: zoom-in;
 }
 
+<<<<<<< HEAD
+=======
+@media (max-width: 960px) {
+  /* line 331, ../sass/core.scss */
+  nav {
+    padding: 2rem;
+    height: auto;
+  }
+
+  /* line 335, ../sass/core.scss */
+  h1 {
+    margin-top: 2rem;
+  }
+
+  /* line 341, ../sass/core.scss */
+  div.footer {
+    padding-top: 1rem;
+  }
+
+  /* line 345, ../sass/core.scss */
+  .labels {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  /* line 348, ../sass/core.scss */
+  .labels .label-wrapper {
+    margin-bottom: 1rem;
+  }
+  /* line 351, ../sass/core.scss */
+  .labels .description {
+    font-size: 18px;
+    line-height: 2rem;
+    white-space: initial;
+  }
+}
+@media (max-width: 580px) {
+  /* line 360, ../sass/core.scss */
+  nav {
+    padding: 2rem;
+    height: auto;
+  }
+
+  /* line 364, ../sass/core.scss */
+  .nav-item.btn {
+    padding: .4rem .8rem;
+  }
+}
+>>>>>>> responsive
 /* line 13, ../sass/about.scss */
 section#about {
   align-items: center;
@@ -541,3 +589,55 @@ section#noteworthy > div:first-of-type, section#techniques > div:first-of-type {
 #container section .skills-scale-wrapper > div i.filled {
   background-color: #2BE7CB;
 }
+<<<<<<< HEAD
+=======
+
+@media (max-width: 960px) {
+  /* line 82, ../sass/about.scss */
+  #container section {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  /* line 85, ../sass/about.scss */
+  #container section:first-of-type {
+    margin-top: 3rem;
+  }
+  /* line 88, ../sass/about.scss */
+  #container section#noteworthy {
+    padding: 0 2rem;
+  }
+  /* line 91, ../sass/about.scss */
+  #container section ul {
+    margin-bottom: 0;
+  }
+
+  /* line 95, ../sass/about.scss */
+  #container section.odd-left {
+    padding: 0 2rem;
+  }
+  /* line 97, ../sass/about.scss */
+  #container section.odd-left:after {
+    display: none;
+  }
+
+  /* line 101, ../sass/about.scss */
+  .w-100.d-flex {
+    flex-direction: column;
+  }
+
+  /* line 104, ../sass/about.scss */
+  .w-50 {
+    width: 100%;
+  }
+
+  /* line 107, ../sass/about.scss */
+  .mt-5 {
+    margin-top: 0rem;
+  }
+
+  /* line 110, ../sass/about.scss */
+  .mb-2 {
+    margin-bottom: 0;
+  }
+}
+>>>>>>> responsive

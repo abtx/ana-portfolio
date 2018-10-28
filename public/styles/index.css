@@ -330,6 +330,33 @@ div.footer {
 .zoom {
   cursor: zoom-in; }
 
+@media (max-width: 960px) {
+  nav {
+    padding: 2rem;
+    height: auto; }
+
+  h1 {
+    margin-top: 2rem; }
+
+  div.footer {
+    padding-top: 1rem; }
+
+  .labels {
+    flex-direction: column;
+    align-items: flex-start; }
+    .labels .label-wrapper {
+      margin-bottom: 1rem; }
+    .labels .description {
+      font-size: 18px;
+      line-height: 2rem;
+      white-space: initial; } }
+@media (max-width: 580px) {
+  nav {
+    padding: 2rem;
+    height: auto; }
+
+  .nav-item.btn {
+    padding: .4rem .8rem; } }
 /* --------------------------- SECTIONS --------------------------- */
 #container section {
   align-items: center;
@@ -446,7 +473,7 @@ div.footer {
             transition: all 0.65s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             height: 100%; }
             #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero .bg-img:hover {
-              overflow: show;
+              overflow: visible;
               transform: scale(1.5); }
   #project-overlay-wrapper .showcase-body {
     padding-top: 3rem;
@@ -515,7 +542,7 @@ div.footer {
         flex-direction: column;
         justify-content: flex-start; }
       #project-overlay-wrapper .showcase-body section .hero {
-        overflow: show;
+        overflow: visible;
         position: relative; }
         #project-overlay-wrapper .showcase-body section .hero .caption {
           display: block;
@@ -563,5 +590,65 @@ div.footer {
             background: url("../overlay/storytelling.svg") no-repeat center center;
             height: 100vh;
             background-size: contain; }
+
+@media (max-width: 960px) {
+  h1 {
+    margin-top: 0; }
+
+  #container section .w-50.hero, #container section .w-50, #container section .w-50.left, #container section .w-50.right, #project-overlay-wrapper .project-overlay-container {
+    padding: 2rem;
+    width: 100%;
+    margin: 0;
+    overflow: visible; }
+
+  #container section, #project-overlay-wrapper .showcase-body section {
+    height: auto;
+    flex-direction: column; }
+    #container section:nth-child(even), #project-overlay-wrapper .showcase-body section:nth-child(even) {
+      flex-direction: column-reverse; }
+
+  #container section .w-50.right.hero, #container section .w-50.left.hero {
+    border-radius: 0;
+    margin: 0; }
+
+  #container section .w-50.hero .bg-img {
+    height: 50vh; }
+
+  #project-overlay-nav .overlay-close {
+    top: 1rem; }
+
+  #project-overlay-nav .overlay-prev, #project-overlay-nav .overlay-next, #contact {
+    bottom: 1rem; }
+
+  #project-overlay-wrapper .showcase-body section.odd-right:after, #project-overlay-wrapper .showcase-body section.odd-left:after {
+    display: none; }
+
+  #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50 {
+    padding: 1rem;
+    width: 100%;
+    height: auto; }
+    #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero {
+      height: 70vh; }
+
+  #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero {
+    padding-top: 0; }
+
+  #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero .bg-img:hover {
+    transform: scale(1);
+    cursor: auto; }
+
+  #project-overlay-wrapper .showcase-body section .hero .bg-img.half, #project-overlay-wrapper .showcase-body section .hero .w-50 {
+    width: 100%; }
+
+  #project-overlay-wrapper .showcase-body section .hero .bg-img.storytelling, #project-overlay-wrapper .showcase-body section .hero .bg-img.social {
+    height: 35vh; }
+
+  #project-overlay-wrapper .showcase-body section .hero .w-50 {
+    flex-direction: column;
+    height: 20rem; }
+
+  .nhs-1, .nhs-2, .nhs-3 {
+    height: 20rem;
+    background-size: contain; } }
 
 /*# sourceMappingURL=index.css.map */

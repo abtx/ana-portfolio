@@ -464,6 +464,51 @@ div.footer {
   cursor: zoom-in;
 }
 
+@media (max-width: 960px) {
+  /* line 331, ../sass/core.scss */
+  nav {
+    padding: 2rem;
+    height: auto;
+  }
+
+  /* line 335, ../sass/core.scss */
+  h1 {
+    margin-top: 2rem;
+  }
+
+  /* line 341, ../sass/core.scss */
+  div.footer {
+    padding-top: 1rem;
+  }
+
+  /* line 345, ../sass/core.scss */
+  .labels {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  /* line 348, ../sass/core.scss */
+  .labels .label-wrapper {
+    margin-bottom: 1rem;
+  }
+  /* line 351, ../sass/core.scss */
+  .labels .description {
+    font-size: 18px;
+    line-height: 2rem;
+    white-space: initial;
+  }
+}
+@media (max-width: 580px) {
+  /* line 360, ../sass/core.scss */
+  nav {
+    padding: 2rem;
+    height: auto;
+  }
+
+  /* line 364, ../sass/core.scss */
+  .nav-item.btn {
+    padding: .4rem .8rem;
+  }
+}
 /* --------------------------- SECTIONS --------------------------- */
 /* line 14, ../sass/index.scss */
 #container section {
@@ -639,7 +684,7 @@ div.footer {
 }
 /* line 166, ../sass/index.scss */
 #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero .bg-img:hover {
-  overflow: show;
+  overflow: visible;
   transform: scale(1.5);
 }
 /* line 177, ../sass/index.scss */
@@ -744,7 +789,7 @@ div.footer {
 }
 /* line 268, ../sass/index.scss */
 #project-overlay-wrapper .showcase-body section .hero {
-  overflow: show;
+  overflow: visible;
   position: relative;
 }
 /* line 271, ../sass/index.scss */
@@ -820,4 +865,99 @@ div.footer {
   background: url("../overlay/storytelling.svg") no-repeat center center;
   height: 100vh;
   background-size: contain;
+}
+
+@media (max-width: 960px) {
+  /* line 337, ../sass/index.scss */
+  h1 {
+    margin-top: 0;
+  }
+
+  /* line 340, ../sass/index.scss */
+  #container section .w-50.hero, #container section .w-50, #container section .w-50.left, #container section .w-50.right, #project-overlay-wrapper .project-overlay-container {
+    padding: 2rem;
+    width: 100%;
+    margin: 0;
+    overflow: visible;
+  }
+
+  /* line 346, ../sass/index.scss */
+  #container section, #project-overlay-wrapper .showcase-body section {
+    height: auto;
+    flex-direction: column;
+  }
+  /* line 349, ../sass/index.scss */
+  #container section:nth-child(even), #project-overlay-wrapper .showcase-body section:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+
+  /* line 353, ../sass/index.scss */
+  #container section .w-50.right.hero, #container section .w-50.left.hero {
+    border-radius: 0;
+    margin: 0;
+  }
+
+  /* line 357, ../sass/index.scss */
+  #container section .w-50.hero .bg-img {
+    height: 50vh;
+  }
+
+  /* line 362, ../sass/index.scss */
+  #project-overlay-nav .overlay-close {
+    top: 1rem;
+  }
+
+  /* line 365, ../sass/index.scss */
+  #project-overlay-nav .overlay-prev, #project-overlay-nav .overlay-next, #contact {
+    bottom: 1rem;
+  }
+
+  /* line 368, ../sass/index.scss */
+  #project-overlay-wrapper .showcase-body section.odd-right:after, #project-overlay-wrapper .showcase-body section.odd-left:after {
+    display: none;
+  }
+
+  /* line 371, ../sass/index.scss */
+  #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50 {
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+  }
+  /* line 375, ../sass/index.scss */
+  #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero {
+    height: 70vh;
+  }
+
+  /* line 379, ../sass/index.scss */
+  #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero {
+    padding-top: 0;
+  }
+
+  /* line 384, ../sass/index.scss */
+  #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero .bg-img:hover {
+    transform: scale(1);
+    cursor: auto;
+  }
+
+  /* line 389, ../sass/index.scss */
+  #project-overlay-wrapper .showcase-body section .hero .bg-img.half, #project-overlay-wrapper .showcase-body section .hero .w-50 {
+    width: 100%;
+  }
+
+  /* line 393, ../sass/index.scss */
+  #project-overlay-wrapper .showcase-body section .hero .bg-img.storytelling, #project-overlay-wrapper .showcase-body section .hero .bg-img.social {
+    height: 35vh;
+  }
+
+  /* line 396, ../sass/index.scss */
+  #project-overlay-wrapper .showcase-body section .hero .w-50 {
+    flex-direction: column;
+    height: 20rem;
+  }
+
+  /* line 400, ../sass/index.scss */
+  .nhs-1, .nhs-2, .nhs-3 {
+    height: 20rem;
+    background-size: contain;
+  }
 }
