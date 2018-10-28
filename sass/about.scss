@@ -30,7 +30,6 @@ section#noteworthy, section#techniques {
 #container section {
   align-items: flex-start;
   display: flex;
-  // margin: 3rem 0;
   padding: 1rem 6rem;
   &:first-of-type {
     margin-top: 5rem;
@@ -52,20 +51,6 @@ section#noteworthy, section#techniques {
       left: -6rem;
       }
     }
-    // .hero {
-    //   overflow: hidden;
-    //   // margin-top: 3rem;
-    //   .bg-img {
-    //     display: block;
-    //     height: 100%;
-    //     width: 100%;
-    //     &.hierarchy {
-    //       background: url('../bank/hierarchy.png') no-repeat center center;
-    //       background-size: contain;
-    //     }
-    //   }
-    // }
-
     .skills-scale-wrapper {
       &:first-of-type {
         margin-right: 3rem;
