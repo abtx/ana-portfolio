@@ -164,7 +164,7 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
               transition: all .65s cubic-bezier(0.68, -0.55, 0.265, 1.55);
               height: 100%;
               &:hover {
-                overflow: show;
+                overflow: visible;
                 transform: scale(1.5);
               }
             }
@@ -266,7 +266,7 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
       }
 
       .hero {
-        overflow: show;
+        overflow: visible;
         position: relative;
         .caption {
           display: block;
@@ -334,13 +334,13 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
 }
 
 @media (max-width: 960px) {
-  #container section .w-50.hero, #container section .w-50, #container section .w-50.left, #container section .w-50.right {
+  #container section .w-50.hero, #container section .w-50, #container section .w-50.left, #container section .w-50.right, #project-overlay-wrapper .project-overlay-container {
     padding: 2rem;
     width: 100%;
     margin: 0;
     overflow: visible;
   }
-  #container section {
+  #container section, #project-overlay-wrapper .showcase-body section {
     height: auto;
     flex-direction: column;
     &:nth-child(even) {
@@ -353,5 +353,49 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
   }
   #container section .w-50.hero .bg-img {
     height: 50vh;
+  }
+
+  // overlay
+  #project-overlay-nav .overlay-close {
+    top: 1rem;
+  }
+  #project-overlay-nav .overlay-prev, #project-overlay-nav .overlay-next, #contact {
+    bottom: 1rem;
+  }
+  #project-overlay-wrapper .showcase-body section.odd-right:after, #project-overlay-wrapper .showcase-body section.odd-left:after {
+    display: none;
+  }
+  #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50 {
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    &.hero {
+      height: 70vh;
+    }
+  }
+  #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero {
+    padding-top: 0;
+  }
+  #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero .bg-img {
+
+    &:hover {
+      transform: scale(1);
+      cursor: auto;
+    }
+  }
+  #project-overlay-wrapper .showcase-body section .hero .bg-img.half, #project-overlay-wrapper .showcase-body section .hero .w-50 {
+    width: 100%;
+  }
+  // individual img adjustments
+  #project-overlay-wrapper .showcase-body section .hero .bg-img.storytelling, #project-overlay-wrapper .showcase-body section .hero .bg-img.social {
+    height: 35vh;
+  }
+  #project-overlay-wrapper .showcase-body section .hero .w-50 {
+    flex-direction: column;
+    height: 20rem;
+  }
+  .nhs-1 , .nhs-2, .nhs-3 {
+    height: 20rem;
+    background-size: contain;
   }
 }

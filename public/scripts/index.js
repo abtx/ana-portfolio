@@ -4,11 +4,11 @@ $(document).keyup(function(e) {
     hideDetails();
   }
 });
-
-$(document).ready(function() {
-  // showDetails();
-  // setActiveProject(0);
-});
+// 
+// $(document).ready(function() {
+//   showDetails();
+//   setActiveProject(2);
+// });
 
 var projects = ['bank', 'mimo', 'nhs', 'social', 'storytelling'];
 var activeProject;

@@ -339,8 +339,21 @@ div.footer {
   h1 {
     margin-top: 2rem; }
 
+  ul.inline {
+    display: block; }
+
   div.footer {
-    padding-top: 1rem; } }
+    padding-top: 1rem; }
+
+  .labels {
+    flex-direction: column;
+    align-items: flex-start; }
+    .labels .label-wrapper {
+      margin-bottom: 1rem; }
+    .labels .description {
+      font-size: 18px;
+      line-height: 2rem;
+      white-space: initial; } }
 @media (max-width: 580px) {
   nav {
     padding: 2rem;
