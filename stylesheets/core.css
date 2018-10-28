@@ -1,0 +1,485 @@
+/*
+Copyright Artur Janas
+SASS: sass --watch sass/core.scss:public/styles/core.css
+*/
+@keyframes plane_in {
+  from {
+    opacity: 0;
+    transform: translate3d(-40px, 40px, -120px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0 0 0);
+  }
+}
+@keyframes plane_out {
+  from {
+    opacity: 1;
+    transform: translate3d(0 0 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(40px, -40px, -120px);
+  }
+}
+/* --------------------------- CORE --------------------------- */
+/* 1.1. Variables */
+/* 1.2.  Core properties */
+/* line 36, ../sass/core.scss */
+html, body {
+  box-sizing: border-box;
+  color: #3C3C3C;
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+  height: 100%;
+}
+
+/* line 44, ../sass/core.scss */
+#container {
+  height: 100vh;
+  overflow-y: scroll;
+  opacity: .1;
+  padding-top: 6rem;
+  transform: scale(1.05) translateY(3rem);
+  transition: all .45s ease-out;
+}
+/* line 51, ../sass/core.scss */
+#container.active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* line 56, ../sass/core.scss */
+nav {
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 31px 31px rgba(0, 0, 0, 0.02);
+  display: flex;
+  height: 2rem;
+  justify-content: space-between;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 4rem 6rem;
+  transition: all .45s ease-out;
+  z-index: 100;
+}
+/* line 70, ../sass/core.scss */
+nav .btn {
+  background-color: #3358ED;
+  border-radius: 40px;
+  color: white;
+  cursor: hand;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  letter-spacing: .04rem;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: none;
+  transition: all .25s ease-in-out;
+  white-space: nowrap;
+  background-image: none;
+  background-color: white;
+  box-shadow: none;
+  color: #4568E7;
+  transition: all .25s ease-in-out;
+}
+/* line 23, ../sass/mixins.scss */
+nav .btn:hover {
+  background: #1d3cda;
+  box-shadow: -12px 10px 15px 0 rgba(0, 0, 0, 0.1);
+}
+/* line 36, ../sass/mixins.scss */
+nav .btn.active {
+  box-shadow: -12px 10px 15px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+/* line 40, ../sass/mixins.scss */
+nav .btn:hover {
+  background-color: #fafafa;
+}
+/* line 42, ../sass/mixins.scss */
+nav .btn:hover.inactive {
+  box-shadow: -12px 10px 15px 0 rgba(0, 0, 0, 0.1);
+}
+/* line 73, ../sass/core.scss */
+nav .nav-item {
+  font-size: 18px;
+  padding: 1rem 2rem;
+}
+
+/* line 78, ../sass/core.scss */
+#contact {
+  align-items: center;
+  background-color: white;
+  border-radius: 6rem;
+  bottom: 2rem;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
+  color: #4568E7;
+  cursor: pointer;
+  cursor: hand;
+  display: flex;
+  font-size: larger;
+  height: 2.2rem;
+  justify-content: center;
+  position: fixed;
+  right: 2rem;
+  width: 2.2rem;
+  z-index: 600;
+}
+/* line 95, ../sass/core.scss */
+#contact #contact-popup {
+  background-color: inherit;
+  border-radius: 2rem;
+  bottom: 3.4rem;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
+  display: none;
+  padding: 1rem 2rem;
+  position: absolute;
+  right: -1.4rem;
+  white-space: nowrap;
+  width: auto;
+  opacity: 0;
+  transform: scale(0.75);
+  transition: all 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+/* line 109, ../sass/core.scss */
+#contact #contact-popup.active {
+  opacity: 1;
+  transform: scale(1);
+}
+/* line 113, ../sass/core.scss */
+#contact #contact-popup:first-of-type {
+  color: #3C3C3C;
+  cursor: auto;
+}
+/* line 117, ../sass/core.scss */
+#contact #contact-popup p {
+  margin: 0;
+}
+/* line 120, ../sass/core.scss */
+#contact #contact-popup:after {
+  border-left: .8rem solid transparent;
+  border-right: .8rem solid transparent;
+  border-top: .8rem solid white;
+  bottom: -.7rem;
+  content: '';
+  height: 0;
+  position: absolute;
+  right: 1.8rem;
+  width: 0;
+}
+
+/* line 133, ../sass/core.scss */
+* {
+  box-sizing: inherit;
+}
+
+/* line 136, ../sass/core.scss */
+h1 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 3rem 0 1rem 0;
+}
+
+/* line 141, ../sass/core.scss */
+h2 {
+  font-size: 26px;
+  font-weight: normal;
+  margin: 3rem 0 2rem 0;
+}
+
+/* line 146, ../sass/core.scss */
+h3 {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 2rem 0;
+}
+/* line 150, ../sass/core.scss */
+h3:first-of-type {
+  margin-top: 0;
+}
+
+/* line 154, ../sass/core.scss */
+.h1-underline {
+  display: block;
+  position: relative;
+  margin-bottom: 3rem;
+}
+/* line 158, ../sass/core.scss */
+.h1-underline.xs {
+  margin-bottom: 1.8rem;
+}
+/* line 161, ../sass/core.scss */
+.h1-underline:after {
+  content: '';
+  background-color: #3C3C3C;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 0rem;
+  width: 12rem;
+}
+
+/* line 171, ../sass/core.scss */
+p {
+  font-size: 18px;
+  margin: 1rem 0 0 0;
+  line-height: 2rem;
+}
+/* line 175, ../sass/core.scss */
+p.large {
+  font-size: 22px;
+}
+/* line 178, ../sass/core.scss */
+p.xs {
+  font-size: 13px;
+  line-height: normal;
+}
+
+/* line 183, ../sass/core.scss */
+a {
+  color: #4568E7;
+  cursor: pointer;
+  cursor: hand;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* line 190, ../sass/core.scss */
+ul {
+  font-size: 18px;
+  list-style: none;
+  margin: .4rem 0 2rem 0;
+  padding: 0;
+}
+/* line 196, ../sass/core.scss */
+ul.w-icons li {
+  padding-left: 3rem;
+  position: relative;
+}
+/* line 202, ../sass/core.scss */
+ul.inline {
+  display: inline-flex;
+}
+/* line 204, ../sass/core.scss */
+ul.inline li {
+  padding-right: 1rem;
+}
+/* line 208, ../sass/core.scss */
+ul li {
+  color: #3C3C3C;
+  padding: .5rem 0;
+  color: #555252;
+}
+/* line 212, ../sass/core.scss */
+ul li.bold {
+  color: #3C3C3C;
+  font-weight: bold;
+}
+
+/* line 219, ../sass/core.scss */
+.labels {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+/* line 223, ../sass/core.scss */
+.labels .label-wrapper {
+  flex-basis: 8rem;
+  margin-right: 3rem;
+  flex: 1;
+}
+/* line 227, ../sass/core.scss */
+.labels .label-wrapper .label {
+  font-size: 18px;
+  padding: .3rem 1.3rem;
+  display: inline-block;
+  color: white;
+  border-radius: 2rem;
+  text-align: center;
+}
+/* line 234, ../sass/core.scss */
+.labels .label-wrapper .label.teal {
+  background-color: #2BE7CB;
+}
+/* line 237, ../sass/core.scss */
+.labels .label-wrapper .label.yellow {
+  background-color: #FFCD14;
+}
+/* line 240, ../sass/core.scss */
+.labels .label-wrapper .label.tangerine {
+  background-color: #FE7A7A;
+}
+/* line 245, ../sass/core.scss */
+.labels .description {
+  flex: 8;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+/* line 252, ../sass/core.scss */
+.cta-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  margin-left: -.4rem;
+}
+
+/* line 259, ../sass/core.scss */
+.btn {
+  background-color: #3358ED;
+  border-radius: 40px;
+  color: white;
+  cursor: hand;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  letter-spacing: .04rem;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: none;
+  transition: all .25s ease-in-out;
+  white-space: nowrap;
+}
+/* line 23, ../sass/mixins.scss */
+.btn:hover {
+  background: #1d3cda;
+  box-shadow: -12px 10px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* line 264, ../sass/core.scss */
+div.footer {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0 2rem 0;
+  width: 100%;
+}
+
+/* line 274, ../sass/core.scss */
+.w-50 {
+  width: 50%;
+}
+
+/* line 278, ../sass/core.scss */
+.w-100 {
+  width: 100%;
+}
+
+/* line 282, ../sass/core.scss */
+.d-flex {
+  display: flex;
+}
+
+/* line 286, ../sass/core.scss */
+.flex-column {
+  flex-direction: column;
+}
+
+/* line 290, ../sass/core.scss */
+.justify-content-between {
+  justify-content: space-between;
+}
+
+/* line 294, ../sass/core.scss */
+.justify-content-center {
+  justify-content: center;
+}
+
+/* line 298, ../sass/core.scss */
+.align-items-center {
+  align-items: center;
+}
+
+/* line 301, ../sass/core.scss */
+.mb-0 {
+  margin-bottom: 0rem;
+}
+
+/* line 304, ../sass/core.scss */
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+/* line 307, ../sass/core.scss */
+.mt-0 {
+  margin-top: 0rem;
+}
+
+/* line 310, ../sass/core.scss */
+.mt-1 {
+  margin-top: 1rem;
+}
+
+/* line 313, ../sass/core.scss */
+.mt-2 {
+  margin-top: 2rem;
+}
+
+/* line 316, ../sass/core.scss */
+.mt-3 {
+  margin-top: 3rem;
+}
+
+/* line 319, ../sass/core.scss */
+.mt-5 {
+  margin-top: 5rem;
+}
+
+/* line 322, ../sass/core.scss */
+.blur {
+  filter: blur(14px);
+}
+
+/* line 326, ../sass/core.scss */
+.zoom {
+  cursor: zoom-in;
+}
+
+@media (max-width: 960px) {
+  /* line 331, ../sass/core.scss */
+  nav {
+    padding: 2rem;
+    height: auto;
+  }
+
+  /* line 335, ../sass/core.scss */
+  h1 {
+    margin-top: 2rem;
+  }
+
+  /* line 341, ../sass/core.scss */
+  div.footer {
+    padding-top: 1rem;
+  }
+
+  /* line 345, ../sass/core.scss */
+  .labels {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  /* line 348, ../sass/core.scss */
+  .labels .label-wrapper {
+    margin-bottom: 1rem;
+  }
+  /* line 351, ../sass/core.scss */
+  .labels .description {
+    font-size: 18px;
+    line-height: 2rem;
+    white-space: initial;
+  }
+}
+@media (max-width: 580px) {
+  /* line 360, ../sass/core.scss */
+  nav {
+    padding: 2rem;
+    height: auto;
+  }
+
+  /* line 364, ../sass/core.scss */
+  .nav-item.btn {
+    padding: .4rem .8rem;
+  }
+}
