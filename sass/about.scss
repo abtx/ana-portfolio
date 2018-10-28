@@ -78,3 +78,36 @@ section#noteworthy, section#techniques {
      }
     }
   }
+  @media (max-width: 960px) {
+    #container section {
+      flex-direction: column;
+      padding: 2rem;
+      &:first-of-type {
+        margin-top: 3rem;
+      }
+      &#noteworthy {
+        padding: 0 2rem;
+      }
+      ul {
+        margin-bottom: 0;
+      }
+    }
+    #container section.odd-left {
+      padding: 0 2rem;
+      &:after {
+        display: none;
+      }
+    }
+    .w-100.d-flex {
+      flex-direction: column;
+    }
+    .w-50 {
+      width: 100%;
+    }
+    .mt-5 {
+      margin-top: 0rem;
+    }
+    .mb-2 {
+      margin-bottom: 0;
+    }
+  }

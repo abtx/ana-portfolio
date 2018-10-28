@@ -338,9 +338,6 @@ div.footer {
   h1 {
     margin-top: 2rem; }
 
-  ul.inline {
-    display: block; }
-
   div.footer {
     padding-top: 1rem; }
 
@@ -595,6 +592,9 @@ div.footer {
             background-size: contain; }
 
 @media (max-width: 960px) {
+  h1 {
+    margin-top: 0; }
+
   #container section .w-50.hero, #container section .w-50, #container section .w-50.left, #container section .w-50.right, #project-overlay-wrapper .project-overlay-container {
     padding: 2rem;
     width: 100%;
