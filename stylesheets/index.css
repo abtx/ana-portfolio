@@ -1,0 +1,823 @@
+/*
+Copyright Artur Janas
+SASS: sass --watch sass/index.scss:public/styles/index.css
+
+sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/styles/core.css
+*/
+@keyframes plane_in {
+  from {
+    opacity: 0;
+    transform: translate3d(-40px, 40px, -120px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0 0 0);
+  }
+}
+@keyframes plane_out {
+  from {
+    opacity: 1;
+    transform: translate3d(0 0 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(40px, -40px, -120px);
+  }
+}
+/*
+Copyright Artur Janas
+SASS: sass --watch sass/core.scss:public/styles/core.css
+*/
+@keyframes plane_in {
+  from {
+    opacity: 0;
+    transform: translate3d(-40px, 40px, -120px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0 0 0);
+  }
+}
+@keyframes plane_out {
+  from {
+    opacity: 1;
+    transform: translate3d(0 0 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(40px, -40px, -120px);
+  }
+}
+/* --------------------------- CORE --------------------------- */
+/* 1.1. Variables */
+/* 1.2.  Core properties */
+/* line 36, ../sass/core.scss */
+html, body {
+  box-sizing: border-box;
+  color: #3C3C3C;
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+  height: 100%;
+}
+
+/* line 44, ../sass/core.scss */
+#container {
+  height: 100vh;
+  overflow-y: scroll;
+  opacity: .1;
+  padding-top: 6rem;
+  transform: scale(1.05) translateY(3rem);
+  transition: all .45s ease-out;
+}
+/* line 51, ../sass/core.scss */
+#container.active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* line 56, ../sass/core.scss */
+nav {
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 31px 31px rgba(0, 0, 0, 0.02);
+  display: flex;
+  height: 2rem;
+  justify-content: space-between;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 4rem 6rem;
+  transition: all .45s ease-out;
+  z-index: 100;
+}
+/* line 70, ../sass/core.scss */
+nav .btn {
+  background-color: #3358ED;
+  border-radius: 40px;
+  color: white;
+  cursor: hand;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  letter-spacing: .04rem;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: none;
+  transition: all .25s ease-in-out;
+  white-space: nowrap;
+  background-image: none;
+  background-color: white;
+  box-shadow: none;
+  color: #4568E7;
+  transition: all .25s ease-in-out;
+}
+/* line 23, ../sass/mixins.scss */
+nav .btn:hover {
+  background: #1d3cda;
+  box-shadow: -12px 10px 15px 0 rgba(0, 0, 0, 0.1);
+}
+/* line 36, ../sass/mixins.scss */
+nav .btn.active {
+  box-shadow: -12px 10px 15px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+/* line 40, ../sass/mixins.scss */
+nav .btn:hover {
+  background-color: #fafafa;
+}
+/* line 42, ../sass/mixins.scss */
+nav .btn:hover.inactive {
+  box-shadow: -12px 10px 15px 0 rgba(0, 0, 0, 0.1);
+}
+/* line 73, ../sass/core.scss */
+nav .nav-item {
+  font-size: 18px;
+  padding: 1rem 2rem;
+}
+
+/* line 78, ../sass/core.scss */
+#contact {
+  align-items: center;
+  background-color: white;
+  border-radius: 6rem;
+  bottom: 2rem;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
+  color: #4568E7;
+  cursor: pointer;
+  cursor: hand;
+  display: flex;
+  font-size: larger;
+  height: 2.2rem;
+  justify-content: center;
+  position: fixed;
+  right: 2rem;
+  width: 2.2rem;
+  z-index: 600;
+}
+/* line 95, ../sass/core.scss */
+#contact #contact-popup {
+  background-color: inherit;
+  border-radius: 2rem;
+  bottom: 3.4rem;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
+  display: none;
+  padding: 1rem 2rem;
+  position: absolute;
+  right: -1.4rem;
+  white-space: nowrap;
+  width: auto;
+  opacity: 0;
+  transform: scale(0.75);
+  transition: all 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+/* line 109, ../sass/core.scss */
+#contact #contact-popup.active {
+  opacity: 1;
+  transform: scale(1);
+}
+/* line 113, ../sass/core.scss */
+#contact #contact-popup:first-of-type {
+  color: #3C3C3C;
+  cursor: auto;
+}
+/* line 117, ../sass/core.scss */
+#contact #contact-popup p {
+  margin: 0;
+}
+/* line 120, ../sass/core.scss */
+#contact #contact-popup:after {
+  border-left: .8rem solid transparent;
+  border-right: .8rem solid transparent;
+  border-top: .8rem solid white;
+  bottom: -.7rem;
+  content: '';
+  height: 0;
+  position: absolute;
+  right: 1.8rem;
+  width: 0;
+}
+
+/* line 133, ../sass/core.scss */
+* {
+  box-sizing: inherit;
+}
+
+/* line 136, ../sass/core.scss */
+h1 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 3rem 0 1rem 0;
+}
+
+/* line 141, ../sass/core.scss */
+h2 {
+  font-size: 26px;
+  font-weight: normal;
+  margin: 3rem 0 2rem 0;
+}
+
+/* line 146, ../sass/core.scss */
+h3 {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 2rem 0;
+}
+/* line 150, ../sass/core.scss */
+h3:first-of-type {
+  margin-top: 0;
+}
+
+/* line 154, ../sass/core.scss */
+.h1-underline {
+  display: block;
+  position: relative;
+  margin-bottom: 3rem;
+}
+/* line 158, ../sass/core.scss */
+.h1-underline.xs {
+  margin-bottom: 1.8rem;
+}
+/* line 161, ../sass/core.scss */
+.h1-underline:after {
+  content: '';
+  background-color: #3C3C3C;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 0rem;
+  width: 12rem;
+}
+
+/* line 171, ../sass/core.scss */
+p {
+  font-size: 18px;
+  margin: 1rem 0 0 0;
+  line-height: 2rem;
+}
+/* line 175, ../sass/core.scss */
+p.large {
+  font-size: 22px;
+}
+/* line 178, ../sass/core.scss */
+p.xs {
+  font-size: 13px;
+  line-height: normal;
+}
+
+/* line 183, ../sass/core.scss */
+a {
+  color: #4568E7;
+  cursor: pointer;
+  cursor: hand;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* line 190, ../sass/core.scss */
+ul {
+  font-size: 18px;
+  list-style: none;
+  margin: .4rem 0 2rem 0;
+  padding: 0;
+}
+/* line 196, ../sass/core.scss */
+ul.w-icons li {
+  padding-left: 3rem;
+  position: relative;
+}
+/* line 202, ../sass/core.scss */
+ul.inline {
+  display: inline-flex;
+}
+/* line 204, ../sass/core.scss */
+ul.inline li {
+  padding-right: 1rem;
+}
+/* line 208, ../sass/core.scss */
+ul li {
+  color: #3C3C3C;
+  padding: .5rem 0;
+  color: #555252;
+}
+/* line 212, ../sass/core.scss */
+ul li.bold {
+  color: #3C3C3C;
+  font-weight: bold;
+}
+
+/* line 219, ../sass/core.scss */
+.labels {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+/* line 223, ../sass/core.scss */
+.labels .label-wrapper {
+  flex-basis: 8rem;
+  margin-right: 3rem;
+  flex: 1;
+}
+/* line 227, ../sass/core.scss */
+.labels .label-wrapper .label {
+  font-size: 18px;
+  padding: .3rem 1.3rem;
+  display: inline-block;
+  color: white;
+  border-radius: 2rem;
+  text-align: center;
+}
+/* line 234, ../sass/core.scss */
+.labels .label-wrapper .label.teal {
+  background-color: #2BE7CB;
+}
+/* line 237, ../sass/core.scss */
+.labels .label-wrapper .label.yellow {
+  background-color: #FFCD14;
+}
+/* line 240, ../sass/core.scss */
+.labels .label-wrapper .label.tangerine {
+  background-color: #FE7A7A;
+}
+/* line 245, ../sass/core.scss */
+.labels .description {
+  flex: 8;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+/* line 252, ../sass/core.scss */
+.cta-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1rem;
+  margin-left: -.4rem;
+}
+
+/* line 259, ../sass/core.scss */
+.btn {
+  background-color: #3358ED;
+  border-radius: 40px;
+  color: white;
+  cursor: hand;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  letter-spacing: .04rem;
+  padding: 1rem 2rem;
+  position: relative;
+  text-decoration: none;
+  transition: all .25s ease-in-out;
+  white-space: nowrap;
+}
+/* line 23, ../sass/mixins.scss */
+.btn:hover {
+  background: #1d3cda;
+  box-shadow: -12px 10px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* line 264, ../sass/core.scss */
+div.footer {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0 2rem 0;
+  width: 100%;
+}
+
+/* line 274, ../sass/core.scss */
+.w-50 {
+  width: 50%;
+}
+
+/* line 278, ../sass/core.scss */
+.w-100 {
+  width: 100%;
+}
+
+/* line 282, ../sass/core.scss */
+.d-flex {
+  display: flex;
+}
+
+/* line 286, ../sass/core.scss */
+.flex-column {
+  flex-direction: column;
+}
+
+/* line 290, ../sass/core.scss */
+.justify-content-between {
+  justify-content: space-between;
+}
+
+/* line 294, ../sass/core.scss */
+.justify-content-center {
+  justify-content: center;
+}
+
+/* line 298, ../sass/core.scss */
+.align-items-center {
+  align-items: center;
+}
+
+/* line 301, ../sass/core.scss */
+.mb-0 {
+  margin-bottom: 0rem;
+}
+
+/* line 304, ../sass/core.scss */
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+/* line 307, ../sass/core.scss */
+.mt-0 {
+  margin-top: 0rem;
+}
+
+/* line 310, ../sass/core.scss */
+.mt-1 {
+  margin-top: 1rem;
+}
+
+/* line 313, ../sass/core.scss */
+.mt-2 {
+  margin-top: 2rem;
+}
+
+/* line 316, ../sass/core.scss */
+.mt-3 {
+  margin-top: 3rem;
+}
+
+/* line 319, ../sass/core.scss */
+.mt-5 {
+  margin-top: 5rem;
+}
+
+/* line 322, ../sass/core.scss */
+.blur {
+  filter: blur(14px);
+}
+
+/* line 326, ../sass/core.scss */
+.zoom {
+  cursor: zoom-in;
+}
+
+/* --------------------------- SECTIONS --------------------------- */
+/* line 14, ../sass/index.scss */
+#container section {
+  align-items: center;
+  display: flex;
+  height: 60vh;
+  justify-content: center;
+}
+/* line 19, ../sass/index.scss */
+#container section:first-of-type {
+  margin-top: 5rem;
+}
+/* line 23, ../sass/index.scss */
+#container section .w-50 {
+  width: 50%;
+}
+/* line 26, ../sass/index.scss */
+#container section .w-50.left {
+  padding: 6rem 0 6rem 6rem;
+}
+/* line 28, ../sass/index.scss */
+#container section .w-50.left.hero {
+  border-top-right-radius: 6rem;
+  border-bottom-right-radius: 6rem;
+  margin-right: 3rem;
+}
+/* line 34, ../sass/index.scss */
+#container section .w-50.right {
+  padding: 6rem 3rem;
+}
+/* line 36, ../sass/index.scss */
+#container section .w-50.right.hero {
+  border-top-left-radius: 6rem;
+  border-bottom-left-radius: 6rem;
+  margin-left: 3rem;
+}
+/* line 42, ../sass/index.scss */
+#container section .w-50.hero {
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  width: 50%;
+}
+/* line 48, ../sass/index.scss */
+#container section .w-50.hero .bg-img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+/* line 54, ../sass/index.scss */
+#container section .w-50.hero .bank {
+  background: url("../hero/bank.png") no-repeat center center;
+  background-size: cover;
+}
+/* line 59, ../sass/index.scss */
+#container section .w-50.hero .mimo {
+  background: url("../hero/mimo.png") no-repeat center center;
+  background-size: cover;
+}
+/* line 64, ../sass/index.scss */
+#container section .w-50.hero .nhs {
+  background: url("../hero/nhs.png") no-repeat center center;
+  background-size: cover;
+}
+/* line 69, ../sass/index.scss */
+#container section .w-50.hero .social {
+  background: url("../hero/social.png") no-repeat center center;
+  background-size: cover;
+}
+/* line 74, ../sass/index.scss */
+#container section .w-50.hero .storytelling {
+  background: url("../hero/storytelling.png") no-repeat center center;
+  background-size: cover;
+}
+
+/* 3 --------------------------- PROJECT DETAILS --------------------------- */
+/* line 86, ../sass/index.scss */
+#project-overlay-nav {
+  display: none;
+  height: 100vh;
+  opacity: 0;
+  position: relative;
+  transform: scale(0.75);
+  transition: all .25s ease-in-out;
+  z-index: 500;
+}
+/* line 94, ../sass/index.scss */
+#project-overlay-nav.active {
+  opacity: 1;
+  transform: scale(1);
+}
+/* line 98, ../sass/index.scss */
+#project-overlay-nav .overlay-close {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+}
+/* line 102, ../sass/index.scss */
+#project-overlay-nav .overlay-close i {
+  font-size: 2rem;
+}
+/* line 107, ../sass/index.scss */
+#project-overlay-nav .overlay-prev, #project-overlay-nav .overlay-next, #project-overlay-nav .overlay-close {
+  background-color: white;
+  border-radius: 6rem;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
+  padding: .4rem 1rem;
+}
+/* line 113, ../sass/index.scss */
+#project-overlay-nav .overlay-prev {
+  position: fixed;
+  left: 2rem;
+  bottom: 2rem;
+}
+/* line 119, ../sass/index.scss */
+#project-overlay-nav .overlay-next {
+  position: fixed;
+  right: 4.6rem;
+  bottom: 2rem;
+}
+
+/* line 126, ../sass/index.scss */
+#project-overlay-wrapper {
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  left: 0;
+  height: 100vh;
+  opacity: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  transform: scale(0.9) translateY(30vh);
+  transition: all 0.65s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  width: 100%;
+  z-index: 400;
+}
+/* line 142, ../sass/index.scss */
+#project-overlay-wrapper.active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+/* line 147, ../sass/index.scss */
+#project-overlay-wrapper .project-overlay-container {
+  width: 100%;
+  padding: 3rem 6rem;
+}
+/* line 151, ../sass/index.scss */
+#project-overlay-wrapper .project-overlay-container .project-details {
+  display: none;
+}
+/* line 153, ../sass/index.scss */
+#project-overlay-wrapper .project-overlay-container .project-details.active {
+  display: block;
+}
+/* line 157, ../sass/index.scss */
+#project-overlay-wrapper .project-overlay-container .project-details.bank .w-50 {
+  height: 50vh;
+  padding-right: 6rem;
+}
+/* line 160, ../sass/index.scss */
+#project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero {
+  padding: 3rem;
+}
+/* line 162, ../sass/index.scss */
+#project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero .bg-img {
+  transform: scale(1);
+  transition: all 0.65s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  height: 100%;
+}
+/* line 166, ../sass/index.scss */
+#project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero .bg-img:hover {
+  overflow: show;
+  transform: scale(1.5);
+}
+/* line 177, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body {
+  padding-top: 3rem;
+  position: relative;
+}
+/* line 180, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section {
+  display: flex;
+  padding-bottom: 3rem;
+  align-items: center;
+}
+/* line 185, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section.odd-left:after, #project-overlay-wrapper .showcase-body section.odd-right:after {
+  content: '';
+  position: absolute;
+  height: 90%;
+  top: 0%;
+  z-index: -1;
+}
+/* line 193, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section.odd-left {
+  position: relative;
+}
+/* line 195, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section.odd-left:after {
+  border-top-left-radius: 6rem;
+  border-bottom-left-radius: 6rem;
+  background-color: #F9FCFF;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
+  left: 0;
+  right: -6rem;
+}
+/* line 204, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section.odd-right {
+  position: relative;
+}
+/* line 206, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section.odd-right:after {
+  border-top-right-radius: 6rem;
+  border-bottom-right-radius: 6rem;
+  background-color: #F9FCFF;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
+  left: -6rem;
+  right: 0;
+}
+/* line 216, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section p {
+  margin-bottom: 2rem;
+}
+/* line 218, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section p:last-of-type {
+  margin-bottom: 0;
+}
+/* line 224, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section ul.w-icons li:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  left: -1rem;
+  padding: .5rem 1.2rem 1rem;
+}
+/* line 235, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section ul.w-icons li.tiles:before {
+  background: url("../icons/tiles.svg") no-repeat center;
+  background-size: 2rem;
+}
+/* line 239, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section ul.w-icons li.view:before {
+  background: url("../icons/view.svg") no-repeat center;
+  background-size: 2rem;
+}
+/* line 243, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section ul.w-icons li.chart:before {
+  background: url("../icons/chart.svg") no-repeat center;
+  background-size: 2rem;
+}
+/* line 247, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section ul.w-icons li.heart:before {
+  background: url("../icons/heart.svg") no-repeat center;
+  background-size: 2rem;
+}
+/* line 251, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section ul.w-icons li.target:before {
+  background: url("../icons/target.svg") no-repeat center;
+  background-size: 2rem;
+}
+/* line 255, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section ul.w-icons li.user:before {
+  background: url("../icons/user.svg") no-repeat center;
+  background-size: 2rem;
+}
+/* line 261, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section .w-50.desc {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+/* line 268, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section .hero {
+  overflow: show;
+  position: relative;
+}
+/* line 271, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section .hero .caption {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+}
+/* line 276, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section .hero .bg-img {
+  display: block;
+  border-radius: 1rem;
+  height: 60vh;
+  width: 100%;
+}
+/* line 281, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section .hero .bg-img.half {
+  height: 50%;
+}
+/* line 284, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section .hero .bg-img.hierarchy {
+  background: url("../bank/hierarchy.png") no-repeat center center;
+  background-size: contain;
+}
+/* line 288, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section .hero .bg-img.user-oriented {
+  background: url("../bank/user-oriented.png") no-repeat center center;
+  background-size: contain;
+}
+/* line 292, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section .hero .bg-img.responsive {
+  background: url("../bank/responsive.png") no-repeat center center;
+  background-size: contain;
+}
+/* line 296, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section .hero .bg-img.transparent {
+  background: url("../bank/transparent.png") no-repeat center center;
+  background-size: contain;
+}
+/* line 300, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section .hero .bg-img.engaging {
+  background: url("../bank/engaging.png") no-repeat center center;
+  background-size: contain;
+}
+/* line 304, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section .hero .bg-img.organised {
+  background: url("../bank/organised.png") no-repeat center center;
+  background-size: contain;
+}
+/* line 308, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section .hero .bg-img.social {
+  background: url("../overlay/social.png") no-repeat center center;
+  background-size: cover;
+}
+/* line 312, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section .hero .bg-img.nhs-1 {
+  background: url("../overlay/nhs-1.png") no-repeat center center;
+  background-size: contain;
+  height: 90vh;
+}
+/* line 317, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section .hero .bg-img.nhs-2 {
+  background: url("../overlay/nhs-2.png") no-repeat center center;
+  background-size: contain;
+}
+/* line 321, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section .hero .bg-img.nhs-3 {
+  background: url("../overlay/nhs-3.png") no-repeat center center;
+  background-size: contain;
+}
+/* line 325, ../sass/index.scss */
+#project-overlay-wrapper .showcase-body section .hero .bg-img.storytelling {
+  background: url("../overlay/storytelling.svg") no-repeat center center;
+  height: 100vh;
+  background-size: contain;
+}
