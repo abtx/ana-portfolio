@@ -272,10 +272,14 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
           display: block;
           text-align: center;
           font-size: 13px;
+          i {
+            margin-top: .3rem;
+            margin-left: .4rem;
+          }
         }
         .bg-img {
+          // border-radius: 1rem;
           display: block;
-          border-radius: 1rem;
           height: 60vh;
           width: 100%;
           &.half {
@@ -286,7 +290,7 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
             background-size: contain;
           }
           &.user-oriented {
-            background: url('../bank/user-oriented.png') no-repeat center center;
+            background: url('../bank/user-oriented.gif') no-repeat center center;
             background-size: contain;
           }
           &.responsive {
@@ -294,7 +298,7 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
             background-size: contain;
           }
           &.transparent {
-            background: url('../bank/transparent.png') no-repeat center center;
+            background: url('../bank/transparent.gif') no-repeat center center;
             background-size: contain;
           }
           &.engaging {
@@ -306,9 +310,9 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
             background-size: contain;
           }
           &.social {
-            background: url('../overlay/social.png') no-repeat center center;
-            background-size: cover;
-          }
+           background: url('../overlay/social.png') no-repeat center center;
+           background-size: cover;
+         }
           &.nhs-1 {
             background: url('../overlay/nhs-1.png') no-repeat center center;
             background-size: contain;
@@ -333,7 +337,7 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
   }
 }
 
-@media (max-width: 960px) {  
+@media (max-width: 960px) {
   h1 {
     margin-top: 0;
   }

@@ -548,9 +548,11 @@ div.footer {
           display: block;
           text-align: center;
           font-size: 13px; }
+          #project-overlay-wrapper .showcase-body section .hero .caption i {
+            margin-top: .3rem;
+            margin-left: .4rem; }
         #project-overlay-wrapper .showcase-body section .hero .bg-img {
           display: block;
-          border-radius: 1rem;
           height: 60vh;
           width: 100%; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.half {
@@ -559,13 +561,13 @@ div.footer {
             background: url("../bank/hierarchy.png") no-repeat center center;
             background-size: contain; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.user-oriented {
-            background: url("../bank/user-oriented.png") no-repeat center center;
+            background: url("../bank/user-oriented.gif") no-repeat center center;
             background-size: contain; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.responsive {
             background: url("../bank/responsive.png") no-repeat center center;
             background-size: contain; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.transparent {
-            background: url("../bank/transparent.png") no-repeat center center;
+            background: url("../bank/transparent.gif") no-repeat center center;
             background-size: contain; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.engaging {
             background: url("../bank/engaging.png") no-repeat center center;

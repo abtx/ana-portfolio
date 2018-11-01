@@ -5,10 +5,10 @@ $(document).keyup(function(e) {
   }
 });
 //
-// $(document).ready(function() {
-//   showDetails();
-//   setActiveProject(2);
-// });
+$(document).ready(function() {
+  // showDetails();
+  // setActiveProject(1);
+});
 
 var projects = ['bank', 'mimo', 'nhs', 'social', 'storytelling'];
 var activeProject;
