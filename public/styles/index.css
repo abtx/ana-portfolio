@@ -207,7 +207,7 @@ a {
 ul {
   font-size: 18px;
   list-style: none;
-  margin: .4rem 0 2rem 0;
+  margin: 0;
   padding: 0; }
   ul.w-icons li {
     padding-left: 3rem;
@@ -359,6 +359,8 @@ div.footer {
   justify-content: center; }
   #container section:first-of-type {
     margin-top: 5rem; }
+  #container section ul {
+    margin: .4rem 0 2rem 0; }
   #container section .w-50 {
     width: 50%; }
     #container section .w-50.left {

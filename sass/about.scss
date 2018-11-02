@@ -12,13 +12,19 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
 
 section#about {
   align-items: center;
-  display: flex;
+  display: grid;
+  grid-template-columns: 200px auto;
   > div {
-    flex: 2;
+    flex: 7;
   }
   > div:first-of-type {
-    flex: 1;
+    background: url('../ankajanas.png') no-repeat top left;
+    background-size: contain;
+    height: 34vh;
+    margin-right: 3rem;
+    flex: 2;
   }
+
 }
 
 section#noteworthy, section#techniques {
@@ -35,18 +41,20 @@ section#noteworthy, section#techniques {
     margin-top: 5rem;
   }
   &.odd-left {
-    padding: 0 6rem 0 6rem;
+    // padding: 0 6rem 0 6rem;
+    padding: 6rem;
+    height: 100%;
     position: relative;
     &:after {
       content: '';
       position: absolute;
       width: calc(103vw);
-      height: 100%;
-      top: 1.5rem;
+      height: calc(100% - 6rem);
       border-top-right-radius: 6rem;
       border-bottom-right-radius: 6rem;
       background-color: $background-box;
       box-shadow: $background-box-shadow;
+      top: 3rem;
       z-index: -1;
       left: -6rem;
       }
@@ -78,11 +86,19 @@ section#noteworthy, section#techniques {
      }
     }
   }
+
+  @media (max-width: 1080px) {
+    #container section .skills-scale-wrapper > div {
+      width: 100%;
+    }
+  }
   @media (max-width: 960px) {
     #container section {
       flex-direction: column;
       padding: 2rem;
       &:first-of-type {
+        display: grid;
+        grid-template-columns: 250px auto;
         margin-top: 3rem;
       }
       &#noteworthy {
@@ -90,6 +106,9 @@ section#noteworthy, section#techniques {
       }
       ul {
         margin-bottom: 0;
+      }
+      .skills-scale-wrapper > div {
+        width: 80%;
       }
     }
     #container section.odd-left {
@@ -109,5 +128,21 @@ section#noteworthy, section#techniques {
     }
     .mb-2 {
       margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 660px) {
+    #container section {
+      flex-direction: column;
+      padding: 2rem;
+      &:first-of-type {
+        display: flex;
+        margin-top: 1rem;
+        > div:first-of-type {
+          background-position: center;
+          margin-bottom: 1rem;
+          width: 100%;
+        }
+      }
     }
   }

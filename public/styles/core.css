@@ -187,7 +187,7 @@ a {
 ul {
   font-size: 18px;
   list-style: none;
-  margin: .4rem 0 2rem 0;
+  margin: 0;
   padding: 0; }
   ul.w-icons li {
     padding-left: 3rem;

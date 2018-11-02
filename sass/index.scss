@@ -19,6 +19,9 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
   &:first-of-type {
     margin-top: 5rem;
   }
+  ul {
+    margin: .4rem 0 2rem 0;
+  }
   .w-50 {
     width: 50%;
 
