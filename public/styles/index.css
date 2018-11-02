@@ -455,7 +455,7 @@ div.footer {
     transform: scale(1) translateY(0); }
   #project-overlay-wrapper .project-overlay-container {
     width: 100%;
-    padding: 3rem 6rem; }
+    padding: 3rem 6rem 8rem 6rem; }
     #project-overlay-wrapper .project-overlay-container .project-details {
       display: none; }
       #project-overlay-wrapper .project-overlay-container .project-details.active {
@@ -584,6 +584,12 @@ div.footer {
           #project-overlay-wrapper .showcase-body section .hero .bg-img.nhs-3 {
             background: url("../overlay/nhs-3.png") no-repeat center center;
             background-size: contain; }
+          #project-overlay-wrapper .showcase-body section .hero .bg-img.nhs-1, #project-overlay-wrapper .showcase-body section .hero .bg-img.nhs-3 {
+            position: relative; }
+            #project-overlay-wrapper .showcase-body section .hero .bg-img.nhs-1 .caption, #project-overlay-wrapper .showcase-body section .hero .bg-img.nhs-3 .caption {
+              position: absolute;
+              bottom: 0;
+              left: 0; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.storytelling {
             background: url("../overlay/storytelling.svg") no-repeat center center;
             height: 100vh;

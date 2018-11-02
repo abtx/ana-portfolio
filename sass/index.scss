@@ -146,7 +146,7 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
   .project-overlay-container {
     // margin: 0 auto;
     width: 100%;
-    padding: 3rem 6rem;
+    padding: 3rem 6rem 8rem 6rem;
     .project-details {
       display: none;
       &.active {
@@ -322,6 +322,14 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
           &.nhs-3 {
             background: url('../overlay/nhs-3.png') no-repeat center center;
             background-size: contain;
+          }
+          &.nhs-1, &.nhs-3 {
+            position: relative;
+            .caption {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+            }
           }
           &.storytelling {
             background: url('../overlay/storytelling.svg') no-repeat center center;

@@ -7,7 +7,7 @@ $(document).keyup(function(e) {
 //
 $(document).ready(function() {
   showDetails();
-  setActiveProject(0);
+  setActiveProject(2);
 });
 
 var projects = ['bank', 'mimo', 'nhs', 'social', 'storytelling'];
@@ -42,6 +42,9 @@ var prevProject = function() {
 // common functions
 
 var setActiveProject = function(index) {
+
+  document.getElementById('project-overlay-wrapper').scrollTop = 0;
+
   activeProject = index;
 
   $('.project-details').removeClass('active');
