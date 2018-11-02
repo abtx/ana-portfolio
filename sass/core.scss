@@ -154,10 +154,7 @@ h3 {
 .h1-underline {
   display: block;
   position: relative;
-  margin-bottom: 2rem;
-  &.xs {
-    margin-bottom: 1.8rem;
-  }
+  margin-bottom: 1.8rem;
   &:after {
     content: '';
     background-color: $text;
@@ -217,13 +214,13 @@ ul {
 }
 
 .labels {
-  display: flex;
+  display: grid;
   align-items: center;
   margin-bottom: 1rem;
+  grid-template-columns: 200px auto;
+  margin-bottom: 1rem;
   .label-wrapper {
-    flex-basis: 8rem;
     margin-right: 3rem;
-    flex: 1;
     .label {
       font-size: 18px;
       padding: .3rem 1.3rem;
@@ -243,7 +240,6 @@ ul {
     }
   }
   .description {
-    flex: 8;
     font-size: 18px;
     white-space: nowrap;
   }
@@ -339,8 +335,8 @@ div.footer {
   }
 
   .labels {
-    flex-direction: column;
-    align-items: flex-start;
+    margin-bottom: 1rem;
+    grid-template-columns: 100vw;
     .label-wrapper {
       margin-bottom: 1rem;
     }
