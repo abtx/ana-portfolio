@@ -6,8 +6,8 @@ $(document).keyup(function(e) {
 });
 //
 $(document).ready(function() {
-  // showDetails();
-  // setActiveProject(1);
+  showDetails();
+  setActiveProject(0);
 });
 
 var projects = ['bank', 'mimo', 'nhs', 'social', 'storytelling'];

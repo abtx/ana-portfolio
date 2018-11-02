@@ -2,7 +2,7 @@
 Copyright Artur Janas
 SASS: sass --watch sass/index.scss:public/styles/index.css
 
-sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/styles/core.css
+sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/styles/core.css sass/about.scss:public/styles/about.css
 */
 @keyframes plane_in {
   from {
@@ -44,11 +44,11 @@ html, body {
   color: #3C3C3C;
   font-family: 'Muli', sans-serif;
   margin: 0;
-  height: 100%; }
+  height: 100%;
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: touch; }
 
 #container {
-  height: 100vh;
-  overflow-y: scroll;
   opacity: .1;
   padding-top: 6rem;
   transform: scale(1.05) translateY(3rem);
@@ -160,7 +160,7 @@ nav {
 h1 {
   font-size: 26px;
   font-weight: bold;
-  margin: 3rem 0 1rem 0; }
+  margin: 0 0 1rem 0; }
 
 h2 {
   font-size: 26px;
@@ -177,7 +177,7 @@ h3 {
 .h1-underline {
   display: block;
   position: relative;
-  margin-bottom: 3rem; }
+  margin-bottom: 2rem; }
   .h1-underline.xs {
     margin-bottom: 1.8rem; }
   .h1-underline:after {
@@ -327,9 +327,6 @@ div.footer {
 .blur {
   filter: blur(14px); }
 
-.zoom {
-  cursor: zoom-in; }
-
 @media (max-width: 960px) {
   nav {
     padding: 2rem;
@@ -464,28 +461,26 @@ div.footer {
       #project-overlay-wrapper .project-overlay-container .project-details.active {
         display: block; }
       #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50 {
-        height: 50vh;
+        height: 80vh;
         padding-right: 6rem; }
         #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
           padding: 3rem; }
           #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero .bg-img {
-            transform: scale(1);
-            transition: all 0.65s cubic-bezier(0.68, -0.55, 0.265, 1.55);
             height: 100%; }
-            #project-overlay-wrapper .project-overlay-container .project-details.bank .w-50.hero .bg-img:hover {
-              overflow: visible;
-              transform: scale(1.5); }
   #project-overlay-wrapper .showcase-body {
     padding-top: 3rem;
     position: relative; }
     #project-overlay-wrapper .showcase-body section {
       display: flex;
-      padding-bottom: 3rem;
       align-items: center; }
       #project-overlay-wrapper .showcase-body section.odd-left:after, #project-overlay-wrapper .showcase-body section.odd-right:after {
         content: '';
         position: absolute;
-        height: 90%;
+        height: 100%;
         top: 0%;
         z-index: -1; }
       #project-overlay-wrapper .showcase-body section.odd-left {
@@ -561,13 +556,14 @@ div.footer {
             background: url("../bank/hierarchy.png") no-repeat center center;
             background-size: contain; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.user-oriented {
-            background: url("../bank/user-oriented.gif") no-repeat center center;
-            background-size: contain; }
+            background: url("../bank/user-oriented.mp4") no-repeat center center;
+            background-size: contain;
+            position: relative; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.responsive {
             background: url("../bank/responsive.png") no-repeat center center;
             background-size: contain; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.transparent {
-            background: url("../bank/transparent.gif") no-repeat center center;
+            background: url("../bank/transparent.mp4") no-repeat center center;
             background-size: contain; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.engaging {
             background: url("../bank/engaging.png") no-repeat center center;
@@ -652,5 +648,15 @@ div.footer {
   .nhs-1, .nhs-2, .nhs-3 {
     height: 20rem;
     background-size: contain; } }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  #project-overlay-wrapper .showcase-body section .hero .bg-img.user-oriented {
+    background: url("../bank/user-oriented.gif") no-repeat center center;
+    background-size: contain;
+    position: relative; }
+
+  #project-overlay-wrapper .showcase-body section .hero .bg-img.transparent {
+    background: url("../bank/transparent.gif") no-repeat center center;
+    background-size: contain;
+    position: relative; } }
 
 /*# sourceMappingURL=index.css.map */

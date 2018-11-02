@@ -2,7 +2,7 @@
 Copyright Artur Janas
 SASS: sass --watch sass/index.scss:public/styles/index.css
 
-sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/styles/core.css
+sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/styles/core.css sass/about.scss:public/styles/about.css
 */
 
 @import "mixins.scss";
@@ -19,7 +19,6 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
   &:first-of-type {
     margin-top: 5rem;
   }
-  // scroll-snap-align: center;
   .w-50 {
     width: 50%;
 
@@ -155,18 +154,16 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
       }
       &.bank {
         .w-50 {
-          height: 50vh;
+          height: 80vh;
           padding-right: 6rem;
           &.hero {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             padding: 3rem;
             .bg-img {
-              transform: scale(1);
-              transition: all .65s cubic-bezier(0.68, -0.55, 0.265, 1.55);
               height: 100%;
-              &:hover {
-                overflow: visible;
-                transform: scale(1.5);
-              }
             }
           }
         }
@@ -179,13 +176,12 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
     position: relative;
     section {
       display: flex;
-      padding-bottom: 3rem;;
       align-items: center;
       &.odd-left, &.odd-right {
         &:after {
           content: '';
           position: absolute;
-          height: 90%;
+          height: 100%;
           top: 0%;
           z-index: -1;
         }
@@ -290,15 +286,16 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
             background-size: contain;
           }
           &.user-oriented {
-            background: url('../bank/user-oriented.gif') no-repeat center center;
+            background: url('../bank/user-oriented.mp4') no-repeat center center;
             background-size: contain;
+            position: relative;
           }
           &.responsive {
             background: url('../bank/responsive.png') no-repeat center center;
             background-size: contain;
           }
           &.transparent {
-            background: url('../bank/transparent.gif') no-repeat center center;
+            background: url('../bank/transparent.mp4') no-repeat center center;
             background-size: contain;
           }
           &.engaging {
@@ -404,5 +401,18 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
   .nhs-1 , .nhs-2, .nhs-3 {
     height: 20rem;
     background-size: contain;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0){
+  #project-overlay-wrapper .showcase-body section .hero .bg-img.user-oriented {
+    background: url('../bank/user-oriented.gif') no-repeat center center;
+    background-size: contain;
+    position: relative;
+  }
+  #project-overlay-wrapper .showcase-body section .hero .bg-img.transparent {
+    background: url('../bank/transparent.gif') no-repeat center center;
+    background-size: contain;
+    position: relative;
   }
 }

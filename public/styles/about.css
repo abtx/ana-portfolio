@@ -45,11 +45,11 @@ html, body {
   color: #3C3C3C;
   font-family: 'Muli', sans-serif;
   margin: 0;
-  height: 100%; }
+  height: 100%;
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: touch; }
 
 #container {
-  height: 100vh;
-  overflow-y: scroll;
   opacity: .1;
   padding-top: 6rem;
   transform: scale(1.05) translateY(3rem);
@@ -161,7 +161,7 @@ nav {
 h1 {
   font-size: 26px;
   font-weight: bold;
-  margin: 3rem 0 1rem 0; }
+  margin: 0 0 1rem 0; }
 
 h2 {
   font-size: 26px;
@@ -178,7 +178,7 @@ h3 {
 .h1-underline {
   display: block;
   position: relative;
-  margin-bottom: 3rem; }
+  margin-bottom: 2rem; }
   .h1-underline.xs {
     margin-bottom: 1.8rem; }
   .h1-underline:after {
@@ -327,9 +327,6 @@ div.footer {
 
 .blur {
   filter: blur(14px); }
-
-.zoom {
-  cursor: zoom-in; }
 
 @media (max-width: 960px) {
   nav {
