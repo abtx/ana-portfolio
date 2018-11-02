@@ -271,18 +271,30 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
         overflow: visible;
         position: relative;
         .caption {
-          display: block;
-          text-align: center;
+          background-color: white;
+          border-radius: 2rem;
+          border: 1px solid $background-box;
+          box-shadow: $background-box-shadow;
+          display: inline;
           font-size: 13px;
+          padding: .5rem .6rem;
+          text-align: center;
+          white-space: nowrap;
+          &.abs {
+            text-align: left;
+            bottom: 2rem;
+            right: 1rem;
+            position: absolute;
+          }
           i {
             margin-top: .3rem;
             margin-left: .4rem;
           }
         }
         .bg-img {
-          // border-radius: 1rem;
           display: block;
           height: 60vh;
+          position: relative;
           width: 100%;
           &.half {
             height: 50%;
@@ -331,11 +343,6 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
           }
           &.nhs-1, &.nhs-3 {
             position: relative;
-            .caption {
-              position: absolute;
-              bottom: 0;
-              left: 0;
-            }
           }
           &.storytelling {
             background: url('../overlay/storytelling.svg') no-repeat center center;

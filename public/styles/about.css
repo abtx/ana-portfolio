@@ -214,7 +214,8 @@ ul {
     padding-left: 3rem;
     position: relative; }
   ul.inline {
-    display: inline-flex; }
+    display: inline-flex;
+    margin-bottom: 2rem; }
     ul.inline li {
       padding-right: 1rem; }
   ul li {
@@ -359,10 +360,10 @@ section#about {
   section#about > div {
     flex: 7; }
   section#about > div:first-of-type {
-    background: url("../ankajanas.png") no-repeat top left;
+    background: url("../ankajanas.png") no-repeat center left;
     background-size: contain;
     height: 34vh;
-    margin-right: 3rem;
+    margin-right: 8rem;
     flex: 2; }
 
 section#noteworthy > div:first-of-type, section#techniques > div:first-of-type {
@@ -374,6 +375,8 @@ section#noteworthy > div:first-of-type, section#techniques > div:first-of-type {
   padding: 1rem 6rem; }
   #container section:first-of-type {
     margin-top: 5rem; }
+  #container section h1 {
+    margin-top: 2rem; }
   #container section.odd-left {
     padding: 6rem;
     height: 100%;
@@ -387,7 +390,7 @@ section#noteworthy > div:first-of-type, section#techniques > div:first-of-type {
       border-bottom-right-radius: 6rem;
       background-color: #F9FCFF;
       box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.07);
-      top: 3rem;
+      top: 4rem;
       z-index: -1;
       left: -6rem; }
   #container section .skills-scale-wrapper:first-of-type {

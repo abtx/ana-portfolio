@@ -193,7 +193,8 @@ ul {
     padding-left: 3rem;
     position: relative; }
   ul.inline {
-    display: inline-flex; }
+    display: inline-flex;
+    margin-bottom: 2rem; }
     ul.inline li {
       padding-right: 1rem; }
   ul li {
