@@ -516,22 +516,22 @@ div.footer {
         left: -1rem;
         padding: .5rem 1.2rem 1rem; }
       #project-overlay-wrapper .showcase-body section ul.w-icons li.tiles:before {
-        background: url("./public/icons/tiles.svg") no-repeat center;
+        background: url("../icons/tiles.svg") no-repeat center;
         background-size: 2rem; }
       #project-overlay-wrapper .showcase-body section ul.w-icons li.view:before {
-        background: url("./public/icons/view.svg") no-repeat center;
+        background: url("../icons/view.svg") no-repeat center;
         background-size: 2rem; }
       #project-overlay-wrapper .showcase-body section ul.w-icons li.chart:before {
-        background: url("./public/icons/chart.svg") no-repeat center;
+        background: url("../icons/chart.svg") no-repeat center;
         background-size: 2rem; }
       #project-overlay-wrapper .showcase-body section ul.w-icons li.heart:before {
-        background: url("./public/icons/heart.svg") no-repeat center;
+        background: url("../icons/heart.svg") no-repeat center;
         background-size: 2rem; }
       #project-overlay-wrapper .showcase-body section ul.w-icons li.target:before {
-        background: url("./public/icons/target.svg") no-repeat center;
+        background: url("../icons/target.svg") no-repeat center;
         background-size: 2rem; }
       #project-overlay-wrapper .showcase-body section ul.w-icons li.user:before {
-        background: url("./public/icons/user.svg") no-repeat center;
+        background: url("../icons/user.svg") no-repeat center;
         background-size: 2rem; }
       #project-overlay-wrapper .showcase-body section .w-50.desc {
         align-items: center;
