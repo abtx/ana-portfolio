@@ -235,27 +235,27 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
         }
         // image paths
         li.tiles:before {
-          background: url('../icons/tiles.svg') no-repeat center;
+          background: url('./public/icons/tiles.svg') no-repeat center;
           background-size: 2rem;
         }
         li.view:before {
-          background: url('../icons/view.svg') no-repeat center;
+          background: url('./public/icons/view.svg') no-repeat center;
           background-size: 2rem;
         }
         li.chart:before {
-          background: url('../icons/chart.svg') no-repeat center;
+          background: url('./public/icons/chart.svg') no-repeat center;
           background-size: 2rem;
         }
         li.heart:before {
-          background: url('../icons/heart.svg') no-repeat center;
+          background: url('./public/icons/heart.svg') no-repeat center;
           background-size: 2rem;
         }
         li.target:before {
-          background: url('../icons/target.svg') no-repeat center;
+          background: url('./public/icons/target.svg') no-repeat center;
           background-size: 2rem;
         }
         li.user:before {
-          background: url('../icons/user.svg') no-repeat center;
+          background: url('./public/icons/user.svg') no-repeat center;
           background-size: 2rem;
         }
       }
