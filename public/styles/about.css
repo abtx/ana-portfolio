@@ -328,7 +328,7 @@ div.footer {
 
 @media (max-width: 960px) {
   nav {
-    padding: 2rem;
+    padding: 2rem 0;
     height: auto; }
 
   h1 {
@@ -346,11 +346,10 @@ div.footer {
       font-size: 18px;
       line-height: 2rem;
       white-space: initial; } }
-@media (max-width: 580px) {
+@media (max-width: 660px) {
   nav {
     flex-direction: column;
     height: auto;
-    padding: 2rem;
     position: relative; }
     nav span:nth-of-type(1) {
       margin: 3rem 0 1rem 0; }
@@ -361,7 +360,16 @@ div.footer {
       text-align: center; }
 
   .nav-item.btn {
-    padding: .4rem .8rem; } }
+    padding: .4rem .8rem; }
+
+  ul.inline {
+    flex-direction: column; }
+
+  .project-details {
+    padding-bottom: 4rem; }
+
+  #contact {
+    bottom: 2rem; } }
 section#about {
   align-items: center;
   display: grid;
@@ -458,15 +466,29 @@ section#noteworthy > div:first-of-type, section#techniques > div:first-of-type {
   .mb-2 {
     margin-bottom: 0; } }
 @media (max-width: 660px) {
+  #container {
+    padding-top: 0; }
+    #container > section:first-of-type {
+      margin-top: 0; }
+
   #container section {
     flex-direction: column;
     padding: 2rem; }
     #container section:first-of-type {
-      display: flex;
-      margin-top: 1rem; }
+      display: flex; }
       #container section:first-of-type > div:first-of-type {
         background-position: center;
         margin: 1rem 0;
-        width: 100%; } }
+        width: 100%; }
+
+  #container section .skills-scale-wrapper > div {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%; }
+    #container section .skills-scale-wrapper > div span:nth-of-type(2) {
+      margin-top: 1rem; }
+      #container section .skills-scale-wrapper > div span:nth-of-type(2) i:first-of-type {
+        margin-left: 0; } }
 
 /*# sourceMappingURL=about.css.map */

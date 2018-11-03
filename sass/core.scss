@@ -322,7 +322,7 @@ div.footer {
 
 @media (max-width: 960px) {
   nav {
-    padding: 2rem;
+    padding: 2rem 0;
     height: auto;
   }
   h1 {
@@ -349,11 +349,10 @@ div.footer {
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 660px) {
   nav {
     flex-direction: column;
     height: auto;
-    padding: 2rem;
     position: relative;
     span {
       &:nth-of-type(1) {
@@ -369,5 +368,14 @@ div.footer {
   }
   .nav-item.btn {
     padding: .4rem .8rem;
+  }
+  ul.inline {
+    flex-direction: column;
+  }
+  .project-details {
+    padding-bottom: 4rem;
+  }
+  #contact {
+    bottom: 2rem;
   }
 }

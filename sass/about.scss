@@ -135,16 +135,33 @@ section#noteworthy, section#techniques {
   }
 
   @media (max-width: 660px) {
+    #container {
+      padding-top: 0;
+      > section:first-of-type {
+        margin-top: 0;
+      }
+    }
     #container section {
       flex-direction: column;
       padding: 2rem;
       &:first-of-type {
         display: flex;
-        margin-top: 1rem;
         > div:first-of-type {
           background-position: center;
           margin: 1rem 0;
           width: 100%;
+        }
+      }
+    }
+    #container section .skills-scale-wrapper > div {
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 100%;
+      span:nth-of-type(2) {
+        margin-top: 1rem;
+        i:first-of-type {
+          margin-left: 0;
         }
       }
     }

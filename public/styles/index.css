@@ -327,7 +327,7 @@ div.footer {
 
 @media (max-width: 960px) {
   nav {
-    padding: 2rem;
+    padding: 2rem 0;
     height: auto; }
 
   h1 {
@@ -345,11 +345,10 @@ div.footer {
       font-size: 18px;
       line-height: 2rem;
       white-space: initial; } }
-@media (max-width: 580px) {
+@media (max-width: 660px) {
   nav {
     flex-direction: column;
     height: auto;
-    padding: 2rem;
     position: relative; }
     nav span:nth-of-type(1) {
       margin: 3rem 0 1rem 0; }
@@ -360,7 +359,16 @@ div.footer {
       text-align: center; }
 
   .nav-item.btn {
-    padding: .4rem .8rem; } }
+    padding: .4rem .8rem; }
+
+  ul.inline {
+    flex-direction: column; }
+
+  .project-details {
+    padding-bottom: 4rem; }
+
+  #contact {
+    bottom: 2rem; } }
 /* --------------------------- SECTIONS --------------------------- */
 #container section {
   align-items: center;
@@ -526,22 +534,22 @@ div.footer {
         left: -1rem;
         padding: .5rem 1.2rem 1rem; }
       #project-overlay-wrapper .showcase-body section ul.w-icons li.tiles:before {
-        background: url("../icons/tiles.svg") no-repeat center;
+        background: url("../Icons/tiles.svg") no-repeat center;
         background-size: 2rem; }
       #project-overlay-wrapper .showcase-body section ul.w-icons li.view:before {
-        background: url("../icons/view.svg") no-repeat center;
+        background: url("../Icons/view.svg") no-repeat center;
         background-size: 2rem; }
       #project-overlay-wrapper .showcase-body section ul.w-icons li.chart:before {
-        background: url("../icons/chart.svg") no-repeat center;
+        background: url("../Icons/chart.svg") no-repeat center;
         background-size: 2rem; }
       #project-overlay-wrapper .showcase-body section ul.w-icons li.heart:before {
-        background: url("../icons/heart.svg") no-repeat center;
+        background: url("../Icons/heart.svg") no-repeat center;
         background-size: 2rem; }
       #project-overlay-wrapper .showcase-body section ul.w-icons li.target:before {
-        background: url("../icons/target.svg") no-repeat center;
+        background: url("../Icons/target.svg") no-repeat center;
         background-size: 2rem; }
       #project-overlay-wrapper .showcase-body section ul.w-icons li.user:before {
-        background: url("../icons/user.svg") no-repeat center;
+        background: url("../Icons/user.svg") no-repeat center;
         background-size: 2rem; }
       #project-overlay-wrapper .showcase-body section .w-50.desc {
         align-items: center;
@@ -600,8 +608,7 @@ div.footer {
             background-size: cover; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.nhs-1 {
             background: url("../overlay/nhs-1.png") no-repeat center center;
-            background-size: contain;
-            height: 90vh; }
+            background-size: contain; }
           #project-overlay-wrapper .showcase-body section .hero .bg-img.nhs-2 {
             background: url("../overlay/nhs-2.png") no-repeat center center;
             background-size: contain; }
@@ -616,14 +623,23 @@ div.footer {
             background-size: contain; }
 
 @media (max-width: 960px) {
+  html, body {
+    overflow-x: hidden; }
+
   h1 {
     margin-top: 0; }
 
-  #container section .w-50.hero, #container section .w-50, #container section .w-50.left, #container section .w-50.right, #project-overlay-wrapper .project-overlay-container {
+  #container section {
+    align-items: flex-start;
+    box-sizing: initial; }
+
+  #container section .w-50.left, #container section .w-50.right, #project-overlay-wrapper .project-overlay-container {
     padding: 2rem;
     width: 100%;
-    margin: 0;
-    overflow: visible; }
+    margin: 0; }
+
+  #container section .w-50.hero {
+    padding: 0; }
 
   #container section, #project-overlay-wrapper .showcase-body section {
     height: auto;
@@ -635,14 +651,14 @@ div.footer {
     border-radius: 0;
     margin: 0; }
 
-  #container section .w-50.hero .bg-img {
+  #container section .w-50.hero .bg-img, #container section .w-50.hero {
     height: 50vh; }
 
   #project-overlay-nav .overlay-close {
     top: 1rem; }
 
   #project-overlay-nav .overlay-prev, #project-overlay-nav .overlay-next, #contact {
-    bottom: 1rem; }
+    bottom: 2rem; }
 
   #project-overlay-wrapper .showcase-body section.odd-right:after, #project-overlay-wrapper .showcase-body section.odd-left:after {
     display: none; }
@@ -674,7 +690,7 @@ div.footer {
   .nhs-1, .nhs-2, .nhs-3 {
     height: 20rem;
     background-size: contain; } }
-@media (max-width: 580px) {
+@media (max-width: 660px) {
   #container {
     padding-top: 0; }
     #container > section:first-of-type {

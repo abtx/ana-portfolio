@@ -236,27 +236,27 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
         }
         // image paths
         li.tiles:before {
-          background: url('../icons/tiles.svg') no-repeat center;
+          background: url('../Icons/tiles.svg') no-repeat center;
           background-size: 2rem;
         }
         li.view:before {
-          background: url('../icons/view.svg') no-repeat center;
+          background: url('../Icons/view.svg') no-repeat center;
           background-size: 2rem;
         }
         li.chart:before {
-          background: url('../icons/chart.svg') no-repeat center;
+          background: url('../Icons/chart.svg') no-repeat center;
           background-size: 2rem;
         }
         li.heart:before {
-          background: url('../icons/heart.svg') no-repeat center;
+          background: url('../Icons/heart.svg') no-repeat center;
           background-size: 2rem;
         }
         li.target:before {
-          background: url('../icons/target.svg') no-repeat center;
+          background: url('../Icons/target.svg') no-repeat center;
           background-size: 2rem;
         }
         li.user:before {
-          background: url('../icons/user.svg') no-repeat center;
+          background: url('../Icons/user.svg') no-repeat center;
           background-size: 2rem;
         }
       }
@@ -332,7 +332,6 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
           &.nhs-1 {
             background: url('../overlay/nhs-1.png') no-repeat center center;
             background-size: contain;
-            height: 90vh;
           }
           &.nhs-2 {
             background: url('../overlay/nhs-2.png') no-repeat center center;
@@ -357,14 +356,25 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
 }
 
 @media (max-width: 960px) {
+  html, body {
+    overflow-x: hidden;
+  }
   h1 {
     margin-top: 0;
   }
-  #container section .w-50.hero, #container section .w-50, #container section .w-50.left, #container section .w-50.right, #project-overlay-wrapper .project-overlay-container {
+  #container section  {
+    align-items: flex-start;
+    box-sizing: initial;
+  }
+
+   #container section .w-50.left, #container section .w-50.right, #project-overlay-wrapper .project-overlay-container {
     padding: 2rem;
     width: 100%;
     margin: 0;
-    overflow: visible;
+    // overflow: visible;
+  }
+  #container section .w-50.hero {
+    padding: 0;
   }
   #container section, #project-overlay-wrapper .showcase-body section {
     height: auto;
@@ -377,7 +387,7 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
     border-radius: 0;
     margin: 0;
   }
-  #container section .w-50.hero .bg-img {
+  #container section .w-50.hero .bg-img, #container section .w-50.hero {
     height: 50vh;
   }
 
@@ -386,7 +396,7 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
     top: 1rem;
   }
   #project-overlay-nav .overlay-prev, #project-overlay-nav .overlay-next, #contact {
-    bottom: 1rem;
+    bottom: 2rem;
   }
   #project-overlay-wrapper .showcase-body section.odd-right:after, #project-overlay-wrapper .showcase-body section.odd-left:after {
     display: none;
@@ -425,7 +435,7 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
     background-size: contain;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 660px) {
   #container {
     padding-top: 0;
     > section:first-of-type {
