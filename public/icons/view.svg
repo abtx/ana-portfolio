@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="33px" viewBox="0 0 45 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>ViewIcon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="0%" x2="37.1780269%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#8CA8F2" offset="0%"></stop>
+            <stop stop-color="#7296F6" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ViewIcon" transform="translate(0.189793, -1.000000)" fill="url(#linearGradient-1)">
+            <g transform="translate(0.000000, 0.990497)" id="Shape">
+                <path d="M44.27,14.83 C43.91,14.24 35.27,0.4 22.72,0.4 C10.17,0.4 1.53,14.24 1.17,14.83 C0.574408906,15.7955408 0.574408906,17.0144592 1.17,17.98 C1.53,18.57 10.17,32.36 22.71,32.4 L22.77,32.4 C35.28,32.4 43.92,18.56 44.28,17.97 C44.8684241,17.0050154 44.8645585,15.7912172 44.27,14.83 L44.27,14.83 Z M22.77,29.4 L22.77,29.4 C11.77,29.4 3.77,16.4 3.77,16.4 C3.77,16.4 11.77,3.4 22.77,3.4 C33.77,3.4 41.77,16.4 41.77,16.4 C41.77,16.4 33.74,29.4 22.77,29.4 Z"></path>
+                <path d="M22.72,8.4 C18.301722,8.4 14.72,11.981722 14.72,16.4 C14.72,20.818278 18.301722,24.4 22.72,24.4 C27.138278,24.4 30.72,20.818278 30.72,16.4 C30.72,11.981722 27.138278,8.4 22.72,8.4 Z M22.72,21.4 C19.9585763,21.4 17.72,19.1614237 17.72,16.4 C17.72,13.6385763 19.9585763,11.4 22.72,11.4 C25.4814237,11.4 27.72,13.6385763 27.72,16.4 C27.72,19.1614237 25.4814237,21.4 22.72,21.4 L22.72,21.4 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>
