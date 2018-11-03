@@ -347,8 +347,17 @@ div.footer {
       white-space: initial; } }
 @media (max-width: 580px) {
   nav {
+    flex-direction: column;
+    height: auto;
     padding: 2rem;
-    height: auto; }
+    position: relative; }
+    nav span:nth-of-type(1) {
+      margin: 3rem 0 1rem 0; }
+    nav span:nth-of-type(2) {
+      position: absolute;
+      top: 1rem;
+      width: 100%;
+      text-align: center; }
 
   .nav-item.btn {
     padding: .4rem .8rem; } }
@@ -449,7 +458,8 @@ div.footer {
   transform: scale(0.9) translateY(30vh);
   transition: all 0.65s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   width: 100%;
-  z-index: 400; }
+  z-index: 400;
+  -webkit-overflow-scrolling: touch; }
   #project-overlay-wrapper.active {
     opacity: 1;
     transform: scale(1) translateY(0); }
@@ -664,6 +674,11 @@ div.footer {
   .nhs-1, .nhs-2, .nhs-3 {
     height: 20rem;
     background-size: contain; } }
+@media (max-width: 580px) {
+  #container {
+    padding-top: 0; }
+    #container > section:first-of-type {
+      margin-top: 1rem; } }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   #project-overlay-wrapper .showcase-body section .hero .bg-img.user-oriented {
     background: url("../bank/user-oriented.gif") no-repeat center center;

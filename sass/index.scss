@@ -141,6 +141,7 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
   transition: all .65s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   width: 100%;
   z-index: 400;
+  -webkit-overflow-scrolling: touch;
   &.active {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -422,6 +423,14 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
   .nhs-1 , .nhs-2, .nhs-3 {
     height: 20rem;
     background-size: contain;
+  }
+}
+@media (max-width: 580px) {
+  #container {
+    padding-top: 0;
+    > section:first-of-type {
+      margin-top: 1rem;
+    }
   }
 }
 
