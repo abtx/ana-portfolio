@@ -534,7 +534,7 @@ div.footer {
         left: -1rem;
         padding: .5rem 1.2rem 1rem; }
       #project-overlay-wrapper .showcase-body section ul.w-icons li.tiles:before {
-        background: url("../icons/tiles.svg") no-repeat center;
+        background: url("../bank/hierarchy.png") no-repeat center;
         background-size: 2rem; }
       #project-overlay-wrapper .showcase-body section ul.w-icons li.view:before {
         background: url("../icons/view.svg") no-repeat center;
