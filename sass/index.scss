@@ -365,6 +365,7 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
   #container section  {
     align-items: flex-start;
     box-sizing: initial;
+    padding-bottom: 4rem;
   }
 
    #container section .w-50.left, #container section .w-50.right, #project-overlay-wrapper .project-overlay-container {
