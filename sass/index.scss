@@ -366,6 +366,9 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
   #container section  {
     align-items: flex-start;
     box-sizing: initial;
+    &:first-of-type {
+      margin-top: 0rem;
+    }
   }
 
   #container section .w-50.left, #container section .w-50.right, #project-overlay-wrapper {
@@ -441,9 +444,6 @@ sass --watch sass/index.scss:public/styles/index.css sass/core.scss:public/style
 @media (max-width: 660px) {
   #container {
     padding-top: 0;
-    > section:first-of-type {
-      margin-top: 1rem;
-    }
   }
 }
 

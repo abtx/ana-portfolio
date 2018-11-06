@@ -631,6 +631,8 @@ div.footer {
   #container section {
     align-items: flex-start;
     box-sizing: initial; }
+    #container section:first-of-type {
+      margin-top: 0rem; }
 
   #container section .w-50.left, #container section .w-50.right, #project-overlay-wrapper {
     padding-bottom: 4rem; }
@@ -694,9 +696,7 @@ div.footer {
     background-size: contain; } }
 @media (max-width: 660px) {
   #container {
-    padding-top: 0; }
-    #container > section:first-of-type {
-      margin-top: 1rem; } }
+    padding-top: 0; } }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   #project-overlay-wrapper .showcase-body section .hero .bg-img.user-oriented {
     background: url("../bank/user-oriented.gif") no-repeat center center;
