@@ -40,7 +40,6 @@ html, body {
   margin: 0;
   height: 100%;
   scroll-behavior: smooth;
-   -webkit-scroll-behavior: touch;
 }
 
 #container {
@@ -48,6 +47,7 @@ html, body {
   padding-top: 6rem;
   transform: scale(1.05) translateY(3rem);
   transition: all .45s ease-out;
+  -webkit-overflow-scrolling: touch;
   &.active {
     opacity: 1;
     transform: scale(1) translateY(0);
