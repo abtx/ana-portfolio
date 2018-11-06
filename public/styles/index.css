@@ -338,7 +338,7 @@ div.footer {
 
   .labels {
     margin-bottom: 1rem;
-    grid-template-columns: 100vw; }
+    grid-template-columns: auto; }
     .labels .label-wrapper {
       margin-bottom: 1rem; }
     .labels .description {
