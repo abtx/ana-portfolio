@@ -49,9 +49,6 @@ html, body {
   transform: scale(1.05) translateY(3rem);
   transition: all .45s ease-out;
   scroll-behavior: smooth;
-  height: 100vh;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
   &.active {
     opacity: 1;
     transform: scale(1) translateY(0);
